@@ -142,7 +142,8 @@
   /* SERVICES */
   .services{background:var(--cream-2);}
   .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  .svc{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .2s ease, box-shadow .2s ease;display:flex;flex-direction:column;}
+  .svc{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;opacity:0;transform:translateY(46px);transition:transform .6s cubic-bezier(.22,.61,.36,1), opacity .6s ease, box-shadow .2s ease, border-color .2s ease;}
+  .svc.reveal{opacity:1;transform:translateY(0);}
   .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold);}
   .svc-img{position:relative;height:180px;background-size:cover;background-position:center;background-color:var(--forest);}
   .svc-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(11,11,11,.65));}
@@ -216,6 +217,9 @@
     .hero h1{font-size:32px;}
     section{padding:60px 0;}
     .testi .quote{flex:0 0 88%;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .svc{opacity:1;transform:none;transition:box-shadow .2s ease,border-color .2s ease;}
   }
 </style>
 </head>
@@ -467,6 +471,27 @@
     if(prevBtn)prevBtn.addEventListener('click',function(){prev();reset();});
     dots.forEach(function(d,i){d.addEventListener('click',function(){show(i);reset();});});
     start();
+  })();
+
+  (function(){
+    var cards=document.querySelectorAll('.services .svc');
+    if(!cards.length)return;
+    if(!('IntersectionObserver' in window)){
+      cards.forEach(function(c){c.classList.add('reveal');});
+      return;
+    }
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var el=e.target;
+          var i=Array.prototype.indexOf.call(cards,el);
+          el.style.transitionDelay=((i%3)*90)+'ms';
+          el.classList.add('reveal');
+          io.unobserve(el);
+        }
+      });
+    },{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+    cards.forEach(function(c){io.observe(c);});
   })();
 </script>
 </body>
