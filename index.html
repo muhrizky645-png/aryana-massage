@@ -46,6 +46,17 @@
   .btn-outline{background:transparent;color:#F4EFE3;border:1.5px solid rgba(212,175,55,.6);}
   .btn-outline:hover{background:rgba(255,255,255,.12);box-shadow:none;}
 
+  /* ICONS (SVG) */
+  svg{display:block;}
+  .logo .mark svg,.foot-logo .mark svg{width:20px;height:20px;color:var(--gold);}
+  .burger svg{width:26px;height:26px;margin:auto;color:var(--gold);}
+  .hero-card .ic svg{width:22px;height:22px;color:var(--gold);}
+  .svc .ic svg{width:26px;height:26px;color:var(--gold);}
+  .about-visual .leaf svg{width:80px;height:80px;color:var(--gold);}
+  .about li .check svg{width:18px;height:18px;}
+  .quote .stars{display:flex;gap:3px;margin-bottom:12px;}
+  .quote .stars svg{width:16px;height:16px;color:var(--gold);}
+
   /* NAV */
   header.nav{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;}
@@ -56,7 +67,7 @@
   .nav-links a:hover{color:var(--gold);}
   .nav-links a.nav-cta{background:var(--gold);color:#141414;padding:10px 22px;border-radius:999px;font-size:14px;white-space:nowrap;}
   .nav-links a.nav-cta:hover{background:#E4C24E;color:#141414;}
-  .burger{display:none;font-size:26px;background:none;border:none;color:var(--gold);cursor:pointer;}
+  .burger{display:none;background:none;border:none;color:var(--gold);cursor:pointer;padding:0;}
 
   /* HERO */
   .hero{position:relative;background:linear-gradient(135deg,#0A0A0A 0%,#1A1A1A 55%,#242424 100%);color:#fff;overflow:hidden;}
@@ -70,7 +81,7 @@
   .hero-card h3{font-size:22px;color:var(--gold);margin-bottom:6px;}
   .hero-card .row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);}
   .hero-card .row:last-child{border-bottom:none;}
-  .hero-card .ic{width:40px;height:40px;border-radius:10px;background:rgba(201,162,75,.2);display:grid;place-items:center;font-size:20px;flex-shrink:0;}
+  .hero-card .ic{width:40px;height:40px;border-radius:10px;background:rgba(201,162,75,.2);display:grid;place-items:center;flex-shrink:0;}
   .hero-card .row div small{color:rgba(255,255,255,.7);font-size:13px;}
 
   /* SECTION */
@@ -85,12 +96,12 @@
   .about-visual{aspect-ratio:4/5;border-radius:20px;background:linear-gradient(160deg,var(--forest),var(--forest-2));position:relative;overflow:hidden;box-shadow:var(--shadow);}
   .about-visual .badge{position:absolute;bottom:24px;left:24px;right:24px;background:rgba(18,18,18,.92);border:1px solid var(--border);border-radius:14px;padding:18px 20px;}
   .about-visual .badge strong{display:block;font-family:Georgia,serif;font-size:26px;color:var(--gold);}
-  .about-visual .leaf{position:absolute;top:30px;right:30px;font-size:80px;opacity:.25;}
+  .about-visual .leaf{position:absolute;top:30px;right:30px;opacity:.25;}
   .about h2{font-size:34px;color:var(--ink);margin-bottom:20px;}
   .about p{color:var(--muted);margin-bottom:16px;}
   .about ul{list-style:none;margin-top:22px;display:grid;gap:14px;}
   .about li{display:flex;gap:12px;align-items:flex-start;}
-  .about li .check{color:var(--gold);font-weight:700;font-size:18px;flex-shrink:0;}
+  .about li .check{color:var(--gold);flex-shrink:0;margin-top:2px;}
 
   /* STATS */
   .stats{background:var(--forest);color:#fff;}
@@ -104,7 +115,7 @@
   .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   .svc{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px;transition:transform .2s ease, box-shadow .2s ease;}
   .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold);}
-  .svc .ic{width:52px;height:52px;border-radius:12px;background:var(--gold-soft);display:grid;place-items:center;font-size:26px;margin-bottom:18px;}
+  .svc .ic{width:52px;height:52px;border-radius:12px;background:var(--gold-soft);display:grid;place-items:center;margin-bottom:18px;}
   .svc h4{font-size:20px;color:var(--gold);margin-bottom:8px;}
   .svc p{color:var(--muted);font-size:15px;}
 
@@ -112,7 +123,6 @@
   .testi{background:var(--cream);}
   .testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
   .quote{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:30px;position:relative;}
-  .quote .stars{color:var(--gold);letter-spacing:2px;margin-bottom:12px;}
   .quote p{font-style:italic;color:var(--ink);margin-bottom:18px;}
   .quote .who{display:flex;align-items:center;gap:12px;}
   .quote .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#8a6d1f);color:#141414;display:grid;place-items:center;font-family:Georgia,serif;font-weight:700;}
@@ -141,6 +151,7 @@
   footer a{color:rgba(255,255,255,.75);text-decoration:none;display:block;margin-bottom:10px;font-size:15px;}
   footer a:hover{color:var(--gold);}
   .foot-logo{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:22px;color:#fff;margin-bottom:16px;}
+  .foot-logo .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--forest),var(--forest-2));display:grid;place-items:center;color:var(--gold);}
   .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;text-align:center;font-size:14px;color:rgba(255,255,255,.55);}
 
   /* RESPONSIVE */
@@ -165,7 +176,7 @@
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <div class="logo"><span class="mark">&#10047;</span> Aryana <span class="accent">Massage</span></div>
+    <div class="logo"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/><path d="m8 8 1.88 1.88M14.12 9.88 16 8m-8 8 1.88-1.88M14.12 14.12 16 16"/></svg></span> Aryana <span class="accent">Massage</span></div>
     <nav class="nav-links">
       <a href="#about">Tentang</a>
       <a href="#services">Layanan</a>
@@ -173,7 +184,7 @@
       <a href="#guide">Ketentuan</a>
       <a href="#book" class="nav-cta">Booking Sekarang</a>
     </nav>
-    <button class="burger" aria-label="Menu">&#9776;</button>
+    <button class="burger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 6h16M4 18h16"/></svg></button>
   </div>
 </header>
 
@@ -191,10 +202,10 @@
     </div>
     <div class="hero-card">
       <h3>Kenapa Aryana?</h3>
-      <div class="row"><div class="ic">&#127793;</div><div><strong>Terapis Tersertifikasi</strong><br><small>Berpengalaman &amp; terlatih profesional</small></div></div>
-      <div class="row"><div class="ic">&#127968;</div><div><strong>Datang ke Lokasi Anda</strong><br><small>Rumah, hotel, atau vila di seluruh Jogja</small></div></div>
-      <div class="row"><div class="ic">&#129001;</div><div><strong>Produk Alami Pilihan</strong><br><small>Aromaterapi lembut &amp; tidak lengket</small></div></div>
-      <div class="row"><div class="ic">&#128274;</div><div><strong>Higienis &amp; Aman</strong><br><small>Perlengkapan lengkap &amp; steril</small></div></div>
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg></div><div><strong>Terapis Tersertifikasi</strong><br><small>Berpengalaman &amp; terlatih profesional</small></div></div>
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div><div><strong>Datang ke Lokasi Anda</strong><br><small>Rumah, hotel, atau vila di seluruh Jogja</small></div></div>
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div><div><strong>Produk Alami Pilihan</strong><br><small>Aromaterapi lembut &amp; tidak lengket</small></div></div>
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><div><strong>Higienis &amp; Aman</strong><br><small>Perlengkapan lengkap &amp; steril</small></div></div>
     </div>
   </div>
 </section>
@@ -203,7 +214,7 @@
 <section class="about" id="about">
   <div class="wrap about-grid">
     <div class="about-visual">
-      <div class="leaf">&#127807;</div>
+      <div class="leaf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div>
       <div class="badge"><strong>10+ Tahun</strong><span style="color:var(--muted);font-size:14px;">Pengalaman menghadirkan relaksasi</span></div>
     </div>
     <div>
@@ -212,9 +223,9 @@
       <p>Aryana Massage adalah layanan pijat panggilan di Jogja yang profesional dan terjangkau. Kami memahami betapa pentingnya relaksasi dan kesehatan dalam kehidupan sehari-hari, dan kami berkomitmen memberikan pengalaman pijat yang luar biasa langsung di kenyamanan rumah Anda.</p>
       <p>Dengan terapis berpengalaman dan terlatih, kami menawarkan berbagai jenis pijat yang dapat disesuaikan dengan kebutuhan Anda &mdash; mulai dari pijat tradisional hingga perawatan spesial untuk ibu hamil.</p>
       <ul>
-        <li><span class="check">&#10003;</span> Teknik pijat efektif &amp; aman untuk meredakan stres</li>
-        <li><span class="check">&#10003;</span> Mengurangi ketegangan otot &amp; pegal kronis</li>
-        <li><span class="check">&#10003;</span> Meningkatkan kesejahteraan tubuh secara keseluruhan</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Teknik pijat efektif &amp; aman untuk meredakan stres</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Mengurangi ketegangan otot &amp; pegal kronis</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Meningkatkan kesejahteraan tubuh secara keseluruhan</li>
       </ul>
     </div>
   </div>
@@ -245,15 +256,15 @@
       <p>Kombinasi terapis berpengalaman dan produk alami pilihan untuk mengusir penat, meredakan otot kaku, dan mengembalikan energi segar Anda.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc"><div class="ic">&#128524;</div><h4>Javanese Relaxing Massage</h4><p>Relaksasi tradisional untuk melepas pegal &amp; penat harian.</p></div>
-      <div class="svc"><div class="ic">&#129355;</div><h4>Reflexiology</h4><p>Pijat titik saraf untuk melancarkan peredaran &amp; meningkatkan energi tubuh.</p></div>
-      <div class="svc"><div class="ic">&#10024;</div><h4>Premium Combination</h4><p>Body Massage + Refleksi + Totok Wajah dalam 1 sesi lengkap.</p></div>
-      <div class="svc"><div class="ic">&#129331;</div><h4>Prenatal Massage</h4><p>Pijat lembut untuk mengurangi pegal &amp; membuat tubuh ibu hamil lebih nyaman.</p></div>
-      <div class="svc"><div class="ic">&#129532;</div><h4>Massage &amp; Body Scrub</h4><p>Relaksasi + perawatan kulit agar lebih halus &amp; segar.</p></div>
-      <div class="svc"><div class="ic">&#128168;</div><h4>Massage Kerik Therapy</h4><p>Solusi untuk masuk angin, badan berat &amp; pegal intens.</p></div>
-      <div class="svc"><div class="ic">&#128170;</div><h4>Deep Tissue Massage</h4><p>Tekanan dalam untuk mengatasi otot tegang &amp; pegal kronis.</p></div>
-      <div class="svc"><div class="ic">&#129496;</div><h4>Thai Stretching Massage</h4><p>Kombinasi stretching &amp; tekanan untuk tubuh lebih ringan &amp; fleksibel.</p></div>
-      <div class="svc"><div class="ic">&#127775;</div><h4>Signature Massage</h4><p>Perpaduan Thai Massage + Deep Tissue untuk hasil paling maksimal.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/><path d="m8 8 1.88 1.88M14.12 9.88 16 8m-8 8 1.88-1.88M14.12 14.12 16 16"/></svg></div><h4>Javanese Relaxing Massage</h4><p>Relaksasi tradisional untuk melepas pegal &amp; penat harian.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4M4 13h4"/></svg></div><h4>Reflexiology</h4><p>Pijat titik saraf untuk melancarkan peredaran &amp; meningkatkan energi tubuh.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 14.34A2 2 0 0 0 8.66 13L4.5 11.6a.5.5 0 0 1 0-.95L8.66 9.2a2 2 0 0 0 1.28-1.28L11.34 3.5a.5.5 0 0 1 .95 0l1.4 4.42a2 2 0 0 0 1.28 1.28l4.16 1.45a.5.5 0 0 1 0 .95l-4.16 1.34a2 2 0 0 0-1.28 1.28l-1.4 4.42a.5.5 0 0 1-.95 0z"/><path d="M20 3v4M22 5h-4M4 17v2M5 18H3"/></svg></div><h4>Premium Combination</h4><p>Body Massage + Refleksi + Totok Wajah dalam 1 sesi lengkap.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><h4>Prenatal Massage</h4><p>Pijat lembut untuk mengurangi pegal &amp; membuat tubuh ibu hamil lebih nyaman.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C3 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div><h4>Massage &amp; Body Scrub</h4><p>Relaksasi + perawatan kulit agar lebih halus &amp; segar.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2m10.5-11.4A2 2 0 1 1 14 8H2m15.5 9.6A2 2 0 1 0 19 14H2"/></svg></div><h4>Massage Kerik Therapy</h4><p>Solusi untuk masuk angin, badan berat &amp; pegal intens.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div><h4>Deep Tissue Massage</h4><p>Tekanan dalam untuk mengatasi otot tegang &amp; pegal kronis.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6M6 8l6 2 6-2M12 10v4"/></svg></div><h4>Thai Stretching Massage</h4><p>Kombinasi stretching &amp; tekanan untuk tubuh lebih ringan &amp; fleksibel.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><h4>Signature Massage</h4><p>Perpaduan Thai Massage + Deep Tissue untuk hasil paling maksimal.</p></div>
     </div>
   </div>
 </section>
@@ -266,10 +277,10 @@
       <h2>Cerita dari Pelanggan Kami</h2>
     </div>
     <div class="testi-grid">
-      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Selain pijatannya mantap, aku suka banget aroma minyak aromaterapinya. Bikin rileks dan gak lengket di kulit. Habis treatment tidur jadi nyenyak banget!"</p><div class="who"><div class="av">D</div><div><strong>Dewi</strong><small>Bantul</small></div></div></div>
-      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Capek banget habis keliling seharian, untung nemu Aryana. Terapisnya bisa dipanggil langsung ke hotel. Kamar langsung terasa seperti spa bintang lima!"</p><div class="who"><div class="av">N</div><div><strong>Nurul Anjani</strong><small>Yogyakarta</small></div></div></div>
-      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Sangat puas dengan pelayanannya. Terapisnya ramah, sopan, dan pijatannya benar-benar terasa di titik otot yang pegal. Pengalaman spa yang memorable."</p><div class="who"><div class="av">C</div><div><strong>Cindy</strong><small>Sleman</small></div></div></div>
-      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Gak perlu macet-macetan keluar rumah. Tinggal booking, terapis langsung datang. Perlengkapannya lengkap dan higienis. Badan yang kaku langsung enteng lagi!"</p><div class="who"><div class="av">R</div><div><strong>Ryan</strong><small>Yogyakarta</small></div></div></div>
+      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Selain pijatannya mantap, aku suka banget aroma minyak aromaterapinya. Bikin rileks dan gak lengket di kulit. Habis treatment tidur jadi nyenyak banget!"</p><div class="who"><div class="av">D</div><div><strong>Dewi</strong><small>Bantul</small></div></div></div>
+      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Capek banget habis keliling seharian, untung nemu Aryana. Terapisnya bisa dipanggil langsung ke hotel. Kamar langsung terasa seperti spa bintang lima!"</p><div class="who"><div class="av">N</div><div><strong>Nurul Anjani</strong><small>Yogyakarta</small></div></div></div>
+      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Sangat puas dengan pelayanannya. Terapisnya ramah, sopan, dan pijatannya benar-benar terasa di titik otot yang pegal. Pengalaman spa yang memorable."</p><div class="who"><div class="av">C</div><div><strong>Cindy</strong><small>Sleman</small></div></div></div>
+      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Gak perlu macet-macetan keluar rumah. Tinggal booking, terapis langsung datang. Perlengkapannya lengkap dan higienis. Badan yang kaku langsung enteng lagi!"</p><div class="who"><div class="av">R</div><div><strong>Ryan</strong><small>Yogyakarta</small></div></div></div>
     </div>
   </div>
 </section>
@@ -308,7 +319,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-logo"><span class="mark" style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#155B57,#1C6E63);display:grid;place-items:center;color:var(--gold);">&#10047;</span> Aryana Massage</div>
+        <div class="foot-logo"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/><path d="m8 8 1.88 1.88M14.12 9.88 16 8m-8 8 1.88-1.88M14.12 14.12 16 16"/></svg></span> Aryana Massage</div>
         <p style="max-width:320px;">Layanan pijat panggilan profesional &amp; terjangkau ke rumah, hotel, dan vila Anda di seluruh Yogyakarta.</p>
       </div>
       <div>
