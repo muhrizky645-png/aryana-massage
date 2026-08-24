@@ -52,7 +52,6 @@
   .burger svg{width:26px;height:26px;margin:auto;color:var(--gold);}
   .hero-card .ic svg{width:22px;height:22px;color:var(--gold);}
   .svc .ic svg{width:26px;height:26px;color:var(--gold);}
-  .about-visual .leaf svg{width:80px;height:80px;color:var(--gold);}
   .about li .check svg{width:18px;height:18px;}
   .quote .stars{display:flex;gap:3px;margin-bottom:12px;}
   .quote .stars svg{width:16px;height:16px;color:var(--gold);}
@@ -96,10 +95,21 @@
   /* ABOUT */
   .about{background:var(--cream);}
   .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center;}
-  .about-visual{aspect-ratio:4/5;border-radius:20px;background:linear-gradient(160deg,var(--forest),var(--forest-2));position:relative;overflow:hidden;box-shadow:var(--shadow);}
-  .about-visual .badge{position:absolute;bottom:24px;left:24px;right:24px;background:rgba(18,18,18,.92);border:1px solid var(--border);border-radius:14px;padding:18px 20px;}
-  .about-visual .badge strong{display:block;font-family:Georgia,serif;font-size:26px;color:var(--gold);}
-  .about-visual .leaf{position:absolute;top:30px;right:30px;opacity:.25;}
+  .about-slider{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);background:var(--forest);}
+  .about-slider .slides{position:absolute;inset:0;}
+  .about-slider .slide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;background-size:cover;background-position:center;}
+  .about-slider .slide.active{opacity:1;}
+  .about-slider .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.55) 100%);}
+  .about-slider .badge{position:absolute;z-index:3;bottom:24px;left:24px;right:24px;background:rgba(18,18,18,.85);border:1px solid var(--border);border-radius:14px;padding:18px 20px;backdrop-filter:blur(4px);}
+  .about-slider .badge strong{display:block;font-family:Georgia,serif;font-size:26px;color:var(--gold);}
+  .about-slider .nav-arrow{position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:none;background:rgba(18,18,18,.55);color:var(--gold);display:grid;place-items:center;cursor:pointer;transition:background .2s ease;}
+  .about-slider .nav-arrow:hover{background:rgba(18,18,18,.9);}
+  .about-slider .nav-arrow svg{width:22px;height:22px;}
+  .about-slider .nav-arrow.prev{left:16px;}
+  .about-slider .nav-arrow.next{right:16px;}
+  .about-slider .dots{position:absolute;z-index:4;top:18px;left:0;right:0;display:flex;justify-content:center;gap:8px;}
+  .about-slider .dots button{width:9px;height:9px;border-radius:50%;border:none;background:rgba(255,255,255,.45);cursor:pointer;padding:0;transition:background .2s ease,width .2s ease;}
+  .about-slider .dots button.active{background:var(--gold);width:22px;border-radius:999px;}
   .about h2{font-size:34px;color:var(--ink);margin-bottom:20px;}
   .about p{color:var(--muted);margin-bottom:16px;}
   .about ul{list-style:none;margin-top:22px;display:grid;gap:14px;}
@@ -221,8 +231,21 @@
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="wrap about-grid">
-    <div class="about-visual">
-      <div class="leaf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div>
+    <div class="about-slider" id="aboutSlider">
+      <div class="slides">
+        <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&amp;fit=crop&amp;w=900&amp;q=80');"></div>
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&amp;fit=crop&amp;w=900&amp;q=80');"></div>
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&amp;fit=crop&amp;w=900&amp;q=80');"></div>
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;w=900&amp;q=80');"></div>
+      </div>
+      <div class="dots">
+        <button class="active" aria-label="Slide 1"></button>
+        <button aria-label="Slide 2"></button>
+        <button aria-label="Slide 3"></button>
+        <button aria-label="Slide 4"></button>
+      </div>
+      <button class="nav-arrow prev" aria-label="Sebelumnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+      <button class="nav-arrow next" aria-label="Berikutnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
       <div class="badge"><strong>10+ Tahun</strong><span style="color:var(--muted);font-size:14px;">Pengalaman menghadirkan relaksasi</span></div>
     </div>
     <div>
@@ -368,6 +391,29 @@
       });
     });
   }
+
+  (function(){
+    var slider=document.getElementById('aboutSlider');
+    if(!slider)return;
+    var slides=slider.querySelectorAll('.slide');
+    var dots=slider.querySelectorAll('.dots button');
+    var idx=0,timer;
+    function show(n){
+      idx=(n+slides.length)%slides.length;
+      slides.forEach(function(s,i){s.classList.toggle('active',i===idx);});
+      dots.forEach(function(d,i){d.classList.toggle('active',i===idx);});
+    }
+    function next(){show(idx+1);}
+    function prev(){show(idx-1);}
+    function start(){timer=setInterval(next,4500);}
+    function reset(){clearInterval(timer);start();}
+    var nextBtn=slider.querySelector('.nav-arrow.next');
+    var prevBtn=slider.querySelector('.nav-arrow.prev');
+    if(nextBtn)nextBtn.addEventListener('click',function(){next();reset();});
+    if(prevBtn)prevBtn.addEventListener('click',function(){prev();reset();});
+    dots.forEach(function(d,i){d.addEventListener('click',function(){show(i);reset();});});
+    start();
+  })();
 </script>
 </body>
 </html>
