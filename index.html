@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aryana Massage - Pijat Panggilan Profesional ke Rumah Anda</title>
+<style>
+  :root{
+    --forest:#141414;      /* near-black primary */
+    --forest-2:#242424;
+    --sage:#6E6459;
+    --gold:#D4AF37;        /* gold accent */
+    --gold-2:#C9A24B;
+    --gold-soft:#241F13;   /* dark gold tint surface */
+    --cream:#0B0B0B;       /* dark canvas */
+    --cream-2:#131313;
+    --ink:#F4EFE3;         /* light primary text */
+    --muted:#A8A096;
+    --border:#2B2A26;
+    --white:#1A1A1A;       /* card surface */
+    --radius:14px;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.5);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    font-size:16px;
+  }
+  h1,h2,h3,h4{font-family:Georgia,"Times New Roman",serif;line-height:1.2;letter-spacing:-.01em;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  .accent{color:var(--gold);}
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:700;
+    color:var(--gold);font-family:-apple-system,sans-serif;margin-bottom:14px;
+  }
+  .btn{
+    display:inline-block;background:var(--gold);color:#20240F;font-weight:700;
+    padding:14px 30px;border-radius:999px;text-decoration:none;font-size:15px;
+    transition:transform .2s ease, box-shadow .2s ease;border:none;cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(201,162,75,.4);}
+  .btn-outline{background:transparent;color:#F4EFE3;border:1.5px solid rgba(212,175,55,.6);}
+  .btn-outline:hover{background:rgba(255,255,255,.12);box-shadow:none;}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .logo{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:22px;font-weight:700;color:var(--ink);}
+  .logo .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--forest),var(--forest-2));display:grid;place-items:center;color:var(--gold);font-size:18px;}
+  .nav-links{display:flex;gap:30px;align-items:center;}
+  .nav-links a{text-decoration:none;color:var(--ink);font-size:15px;font-weight:500;}
+  .nav-links a:hover{color:var(--gold);}
+  .nav-links a.nav-cta{background:var(--gold);color:#141414;padding:10px 22px;border-radius:999px;font-size:14px;white-space:nowrap;}
+  .nav-links a.nav-cta:hover{background:#E4C24E;color:#141414;}
+  .burger{display:none;font-size:26px;background:none;border:none;color:var(--gold);cursor:pointer;}
+
+  /* HERO */
+  .hero{position:relative;background:linear-gradient(135deg,#0A0A0A 0%,#1A1A1A 55%,#242424 100%);color:#fff;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,75,.28),transparent 70%);}
+  .hero::before{content:"";position:absolute;left:-80px;bottom:-140px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(138,167,155,.25),transparent 70%);}
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;padding:90px 0 100px;}
+  .hero h1{font-size:52px;margin-bottom:22px;}
+  .hero p.lead{font-size:18px;color:rgba(255,255,255,.85);max-width:520px;margin-bottom:32px;}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:30px;backdrop-filter:blur(6px);}
+  .hero-card h3{font-size:22px;color:var(--gold);margin-bottom:6px;}
+  .hero-card .row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+  .hero-card .row:last-child{border-bottom:none;}
+  .hero-card .ic{width:40px;height:40px;border-radius:10px;background:rgba(201,162,75,.2);display:grid;place-items:center;font-size:20px;flex-shrink:0;}
+  .hero-card .row div small{color:rgba(255,255,255,.7);font-size:13px;}
+
+  /* SECTION */
+  section{padding:88px 0;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 54px;}
+  .section-head h2{font-size:38px;color:var(--ink);margin-bottom:14px;}
+  .section-head p{color:var(--muted);font-size:17px;}
+
+  /* ABOUT */
+  .about{background:var(--cream);}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center;}
+  .about-visual{aspect-ratio:4/5;border-radius:20px;background:linear-gradient(160deg,var(--forest),var(--forest-2));position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .about-visual .badge{position:absolute;bottom:24px;left:24px;right:24px;background:rgba(18,18,18,.92);border:1px solid var(--border);border-radius:14px;padding:18px 20px;}
+  .about-visual .badge strong{display:block;font-family:Georgia,serif;font-size:26px;color:var(--gold);}
+  .about-visual .leaf{position:absolute;top:30px;right:30px;font-size:80px;opacity:.25;}
+  .about h2{font-size:34px;color:var(--ink);margin-bottom:20px;}
+  .about p{color:var(--muted);margin-bottom:16px;}
+  .about ul{list-style:none;margin-top:22px;display:grid;gap:14px;}
+  .about li{display:flex;gap:12px;align-items:flex-start;}
+  .about li .check{color:var(--gold);font-weight:700;font-size:18px;flex-shrink:0;}
+
+  /* STATS */
+  .stats{background:var(--forest);color:#fff;}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center;}
+  .stat .num{font-family:Georgia,serif;font-size:46px;color:var(--gold);line-height:1;}
+  .stat .lbl{margin-top:10px;color:rgba(255,255,255,.8);font-size:15px;}
+  .stats .section-head h2{color:#fff;}
+
+  /* SERVICES */
+  .services{background:var(--cream-2);}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .svc{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px;transition:transform .2s ease, box-shadow .2s ease;}
+  .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold);}
+  .svc .ic{width:52px;height:52px;border-radius:12px;background:var(--gold-soft);display:grid;place-items:center;font-size:26px;margin-bottom:18px;}
+  .svc h4{font-size:20px;color:var(--gold);margin-bottom:8px;}
+  .svc p{color:var(--muted);font-size:15px;}
+
+  /* TESTIMONIALS */
+  .testi{background:var(--cream);}
+  .testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .quote{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:30px;position:relative;}
+  .quote .stars{color:var(--gold);letter-spacing:2px;margin-bottom:12px;}
+  .quote p{font-style:italic;color:var(--ink);margin-bottom:18px;}
+  .quote .who{display:flex;align-items:center;gap:12px;}
+  .quote .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#8a6d1f);color:#141414;display:grid;place-items:center;font-family:Georgia,serif;font-weight:700;}
+  .quote .who small{color:var(--muted);display:block;}
+
+  /* GUIDELINES */
+  .guide{background:var(--forest);color:#fff;}
+  .guide .section-head h2{color:#fff;}
+  .guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 40px;max-width:920px;margin:0 auto;}
+  .guide-item{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+  .guide-item .n{width:30px;height:30px;border-radius:50%;background:rgba(201,162,75,.22);color:var(--gold);display:grid;place-items:center;font-weight:700;flex-shrink:0;font-size:14px;}
+  .guide-item p{color:rgba(255,255,255,.85);font-size:15px;}
+  .guide-note{text-align:center;margin-top:36px;color:var(--gold);font-size:15px;}
+
+  /* CTA */
+  .cta-band{background:linear-gradient(135deg,var(--gold),#B8892F);color:#20240F;text-align:center;}
+  .cta-band h2{font-size:36px;margin-bottom:14px;color:#20240F;}
+  .cta-band p{max-width:520px;margin:0 auto 28px;font-size:17px;color:#3a3410;}
+  .cta-band .btn{background:var(--forest);color:#fff;}
+  .cta-band .btn:hover{background:var(--forest-2);box-shadow:0 8px 22px rgba(15,61,62,.35);}
+
+  /* FOOTER */
+  footer{background:#050505;color:rgba(255,255,255,.8);padding:60px 0 30px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  footer h4{color:#fff;margin-bottom:16px;font-size:18px;}
+  footer a{color:rgba(255,255,255,.75);text-decoration:none;display:block;margin-bottom:10px;font-size:15px;}
+  footer a:hover{color:var(--gold);}
+  .foot-logo{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:22px;color:#fff;margin-bottom:16px;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;text-align:center;font-size:14px;color:rgba(255,255,255,.55);}
+
+  /* RESPONSIVE */
+  @media(max-width:860px){
+    .hero-inner,.about-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:38px;}
+    .stats-grid{grid-template-columns:repeat(2,1fr);gap:36px 20px;}
+    .svc-grid{grid-template-columns:1fr 1fr;}
+    .testi-grid,.guide-grid,.foot-grid{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+    .burger{display:block;}
+    .section-head h2{font-size:30px;}
+  }
+  @media(max-width:520px){
+    .svc-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:32px;}
+    section{padding:60px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo"><span class="mark">&#10047;</span> Aryana <span class="accent">Massage</span></div>
+    <nav class="nav-links">
+      <a href="#about">Tentang</a>
+      <a href="#services">Layanan</a>
+      <a href="#testi">Testimoni</a>
+      <a href="#guide">Ketentuan</a>
+      <a href="#book" class="nav-cta">Booking Sekarang</a>
+    </nav>
+    <button class="burger" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding:0;">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow">Pijat Panggilan &bull; Yogyakarta</div>
+      <h1>Relaksasi Bintang Lima, <span class="accent">Langsung di Rumah Anda</span></h1>
+      <p class="lead">Tidak perlu keluar rumah atau menembus kemacetan. Terapis tersertifikasi Aryana Massage siap menghadirkan ketenangan dan kebugaran ke tempat Anda beristirahat.</p>
+      <div class="hero-actions">
+        <a href="#book" class="btn">Pesan Terapis</a>
+        <a href="#services" class="btn btn-outline">Lihat Layanan</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Kenapa Aryana?</h3>
+      <div class="row"><div class="ic">&#127793;</div><div><strong>Terapis Tersertifikasi</strong><br><small>Berpengalaman &amp; terlatih profesional</small></div></div>
+      <div class="row"><div class="ic">&#127968;</div><div><strong>Datang ke Lokasi Anda</strong><br><small>Rumah, hotel, atau vila di seluruh Jogja</small></div></div>
+      <div class="row"><div class="ic">&#129001;</div><div><strong>Produk Alami Pilihan</strong><br><small>Aromaterapi lembut &amp; tidak lengket</small></div></div>
+      <div class="row"><div class="ic">&#128274;</div><div><strong>Higienis &amp; Aman</strong><br><small>Perlengkapan lengkap &amp; steril</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual">
+      <div class="leaf">&#127807;</div>
+      <div class="badge"><strong>10+ Tahun</strong><span style="color:var(--muted);font-size:14px;">Pengalaman menghadirkan relaksasi</span></div>
+    </div>
+    <div>
+      <div class="eyebrow">Tentang Kami</div>
+      <h2>Rasakan Kenyamanan di Mana Pun Anda Berada</h2>
+      <p>Aryana Massage adalah layanan pijat panggilan di Jogja yang profesional dan terjangkau. Kami memahami betapa pentingnya relaksasi dan kesehatan dalam kehidupan sehari-hari, dan kami berkomitmen memberikan pengalaman pijat yang luar biasa langsung di kenyamanan rumah Anda.</p>
+      <p>Dengan terapis berpengalaman dan terlatih, kami menawarkan berbagai jenis pijat yang dapat disesuaikan dengan kebutuhan Anda &mdash; mulai dari pijat tradisional hingga perawatan spesial untuk ibu hamil.</p>
+      <ul>
+        <li><span class="check">&#10003;</span> Teknik pijat efektif &amp; aman untuk meredakan stres</li>
+        <li><span class="check">&#10003;</span> Mengurangi ketegangan otot &amp; pegal kronis</li>
+        <li><span class="check">&#10003;</span> Meningkatkan kesejahteraan tubuh secara keseluruhan</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Pilihan Terbaik untuk Anda</div>
+      <h2>Dipercaya Ribuan Pelanggan</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat"><div class="num">12+</div><div class="lbl">Menu Treatment</div></div>
+      <div class="stat"><div class="num">1.500+</div><div class="lbl">Happy Clients</div></div>
+      <div class="stat"><div class="num">96%</div><div class="lbl">Repeat Customers</div></div>
+      <div class="stat"><div class="num">5.0</div><div class="lbl">Google Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Layanan Kami</div>
+      <h2>Layanan Terbaik Kami</h2>
+      <p>Kombinasi terapis berpengalaman dan produk alami pilihan untuk mengusir penat, meredakan otot kaku, dan mengembalikan energi segar Anda.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc"><div class="ic">&#128524;</div><h4>Javanese Relaxing Massage</h4><p>Relaksasi tradisional untuk melepas pegal &amp; penat harian.</p></div>
+      <div class="svc"><div class="ic">&#129355;</div><h4>Reflexiology</h4><p>Pijat titik saraf untuk melancarkan peredaran &amp; meningkatkan energi tubuh.</p></div>
+      <div class="svc"><div class="ic">&#10024;</div><h4>Premium Combination</h4><p>Body Massage + Refleksi + Totok Wajah dalam 1 sesi lengkap.</p></div>
+      <div class="svc"><div class="ic">&#129331;</div><h4>Prenatal Massage</h4><p>Pijat lembut untuk mengurangi pegal &amp; membuat tubuh ibu hamil lebih nyaman.</p></div>
+      <div class="svc"><div class="ic">&#129532;</div><h4>Massage &amp; Body Scrub</h4><p>Relaksasi + perawatan kulit agar lebih halus &amp; segar.</p></div>
+      <div class="svc"><div class="ic">&#128168;</div><h4>Massage Kerik Therapy</h4><p>Solusi untuk masuk angin, badan berat &amp; pegal intens.</p></div>
+      <div class="svc"><div class="ic">&#128170;</div><h4>Deep Tissue Massage</h4><p>Tekanan dalam untuk mengatasi otot tegang &amp; pegal kronis.</p></div>
+      <div class="svc"><div class="ic">&#129496;</div><h4>Thai Stretching Massage</h4><p>Kombinasi stretching &amp; tekanan untuk tubuh lebih ringan &amp; fleksibel.</p></div>
+      <div class="svc"><div class="ic">&#127775;</div><h4>Signature Massage</h4><p>Perpaduan Thai Massage + Deep Tissue untuk hasil paling maksimal.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi" id="testi">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Kata Mereka</div>
+      <h2>Cerita dari Pelanggan Kami</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Selain pijatannya mantap, aku suka banget aroma minyak aromaterapinya. Bikin rileks dan gak lengket di kulit. Habis treatment tidur jadi nyenyak banget!"</p><div class="who"><div class="av">D</div><div><strong>Dewi</strong><small>Bantul</small></div></div></div>
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Capek banget habis keliling seharian, untung nemu Aryana. Terapisnya bisa dipanggil langsung ke hotel. Kamar langsung terasa seperti spa bintang lima!"</p><div class="who"><div class="av">N</div><div><strong>Nurul Anjani</strong><small>Yogyakarta</small></div></div></div>
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Sangat puas dengan pelayanannya. Terapisnya ramah, sopan, dan pijatannya benar-benar terasa di titik otot yang pegal. Pengalaman spa yang memorable."</p><div class="who"><div class="av">C</div><div><strong>Cindy</strong><small>Sleman</small></div></div></div>
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Gak perlu macet-macetan keluar rumah. Tinggal booking, terapis langsung datang. Perlengkapannya lengkap dan higienis. Badan yang kaku langsung enteng lagi!"</p><div class="who"><div class="av">R</div><div><strong>Ryan</strong><small>Yogyakarta</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDELINES -->
+<section class="guide" id="guide">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Kenyamanan Bersama</div>
+      <h2>Ketentuan Layanan</h2>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-item"><div class="n">1</div><p>Pelanggan tidak diperbolehkan meminta layanan di luar prosedur treatment. Terapis berhak menghentikan sesi bila merasa tidak aman.</p></div>
+      <div class="guide-item"><div class="n">2</div><p>Pijat tidak diberikan kepada pelanggan dengan demam tinggi atau kondisi menular.</p></div>
+      <div class="guide-item"><div class="n">3</div><p>Pelanggan bertanggung jawab atas barang pribadi selama sesi berlangsung.</p></div>
+      <div class="guide-item"><div class="n">4</div><p>Pembatalan kurang dari 30 menit sebelum jadwal akan dikenakan biaya.</p></div>
+      <div class="guide-item"><div class="n">5</div><p>Jika terapis sudah tiba di lokasi dan pelanggan membatalkan, ada biaya tambahan.</p></div>
+      <div class="guide-item"><div class="n">6</div><p>Untuk hotel atau vila, pastikan akomodasi mengizinkan terapis dari luar sebelum booking.</p></div>
+      <div class="guide-item"><div class="n">7</div><p>Mohon informasikan kondisi kesehatan seperti kehamilan, darah tinggi, atau alergi kepada terapis.</p></div>
+    </div>
+    <p class="guide-note">*Harga layanan Aryana Home Massage belum termasuk biaya transportasi.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="book">
+  <div class="wrap">
+    <h2>Siap Merasakan Ketenangan Aryana?</h2>
+    <p>Pesan terapis tersertifikasi kami sekarang dan nikmati relaksasi bintang lima tanpa keluar rumah.</p>
+    <a href="#" class="btn">Booking via WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><span class="mark" style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#155B57,#1C6E63);display:grid;place-items:center;color:var(--gold);">&#10047;</span> Aryana Massage</div>
+        <p style="max-width:320px;">Layanan pijat panggilan profesional &amp; terjangkau ke rumah, hotel, dan vila Anda di seluruh Yogyakarta.</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <a href="#about">Tentang Kami</a>
+        <a href="#services">Layanan</a>
+        <a href="#testi">Testimoni</a>
+        <a href="#guide">Ketentuan</a>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <a href="#">WhatsApp: 08xx-xxxx-xxxx</a>
+        <a href="#">Instagram: @aryanamassage</a>
+        <a href="https://aryanamassage.com">aryanamassage.com</a>
+        <a href="#">Yogyakarta, Indonesia</a>
+        <a href="#">Setiap hari &bull; 09.00 - 23.00</a>
+      </div>
+    </div>
+    <div class="foot-bottom">&copy; 2026 Aryana Massage. Seluruh hak cipta dilindungi.</div>
+  </div>
+</footer>
+
+<script>
+  var burger=document.querySelector('.burger');
+  var links=document.querySelector('.nav-links');
+  if(burger){burger.addEventListener('click',function(){
+    if(links.style.display==='flex'){links.style.display='none';}
+    else{links.style.display='flex';links.style.position='absolute';links.style.top='72px';links.style.left='0';links.style.right='0';links.style.flexDirection='column';links.style.background='var(--cream)';links.style.padding='20px 24px';links.style.borderBottom='1px solid var(--border)';links.style.gap='16px';}
+  });}
+</script>
+</body>
+</html>
