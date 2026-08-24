@@ -153,6 +153,7 @@
 
   /* TESTIMONIALS */
   .testi{background:var(--cream);}
+  .testi-hint{display:none;text-align:center;color:var(--muted);font-size:13px;margin-top:16px;letter-spacing:.03em;}
   .testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
   .quote{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:30px;position:relative;}
   .quote p{font-style:italic;color:var(--ink);margin-bottom:18px;}
@@ -193,7 +194,12 @@
     .hero h1{font-size:38px;}
     .stats-grid{grid-template-columns:repeat(2,1fr);gap:36px 20px;}
     .svc-grid{grid-template-columns:1fr 1fr;}
-    .testi-grid,.guide-grid,.foot-grid{grid-template-columns:1fr;}
+    .guide-grid,.foot-grid{grid-template-columns:1fr;}
+    .testi-grid{display:flex;grid-template-columns:none;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin:0 -24px;padding:4px 24px 18px;scrollbar-width:none;}
+    .testi-grid::-webkit-scrollbar{display:none;}
+    .testi .quote{scroll-snap-align:center;flex:0 0 84%;padding:24px;}
+    .testi .quote p{font-size:15px;}
+    .testi-hint{display:block;}
     .nav-links{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 24px 44px rgba(0,0,0,.55);padding:10px 18px 22px;align-items:stretch;opacity:0;visibility:hidden;transform:translateY(-12px);pointer-events:none;transition:opacity .24s ease,transform .24s ease,visibility .24s ease;}
     .nav-links.open{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;}
     .nav-links a{color:var(--ink);font-size:16px;font-weight:500;padding:15px 10px;text-align:left;border-bottom:1px solid var(--border);transition:color .2s ease,padding-left .2s ease;}
@@ -206,6 +212,7 @@
     .svc-grid{grid-template-columns:1fr;}
     .hero h1{font-size:32px;}
     section{padding:60px 0;}
+    .testi .quote{flex:0 0 88%;}
   }
 </style>
 </head>
@@ -355,6 +362,7 @@
       <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Sangat puas dengan pelayanannya. Terapisnya ramah, sopan, dan pijatannya benar-benar terasa di titik otot yang pegal. Pengalaman spa yang memorable."</p><div class="who"><div class="av">C</div><div><strong>Cindy</strong><small>Sleman</small></div></div></div>
       <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Gak perlu macet-macetan keluar rumah. Tinggal booking, terapis langsung datang. Perlengkapannya lengkap dan higienis. Badan yang kaku langsung enteng lagi!"</p><div class="who"><div class="av">R</div><div><strong>Ryan</strong><small>Yogyakarta</small></div></div></div>
     </div>
+    <div class="testi-hint">&larr; Geser untuk melihat lebih banyak &rarr;</div>
   </div>
 </section>
 
