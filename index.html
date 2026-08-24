@@ -68,6 +68,9 @@
   .nav-links a.nav-cta{background:var(--gold);color:#141414;padding:10px 22px;border-radius:999px;font-size:14px;white-space:nowrap;}
   .nav-links a.nav-cta:hover{background:#E4C24E;color:#141414;}
   .burger{display:none;background:none;border:none;color:var(--gold);cursor:pointer;padding:0;}
+  .burger .ic-close{display:none;}
+  .burger.active .ic-menu{display:none;}
+  .burger.active .ic-close{display:block;}
 
   /* HERO */
   .hero{position:relative;background:linear-gradient(135deg,#0A0A0A 0%,#1A1A1A 55%,#242424 100%);color:#fff;overflow:hidden;}
@@ -162,8 +165,11 @@
     .stats-grid{grid-template-columns:repeat(2,1fr);gap:36px 20px;}
     .svc-grid{grid-template-columns:1fr 1fr;}
     .testi-grid,.guide-grid,.foot-grid{grid-template-columns:1fr;}
-    .nav-links{display:none;}
-    .nav-links.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--cream);padding:20px 24px;border-bottom:1px solid var(--border);gap:16px;}
+    .nav-links{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 24px 44px rgba(0,0,0,.55);padding:10px 18px 22px;align-items:stretch;opacity:0;visibility:hidden;transform:translateY(-12px);pointer-events:none;transition:opacity .24s ease,transform .24s ease,visibility .24s ease;}
+    .nav-links.open{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;}
+    .nav-links a{color:var(--ink);font-size:16px;font-weight:500;padding:15px 10px;text-align:left;border-bottom:1px solid var(--border);transition:color .2s ease,padding-left .2s ease;}
+    .nav-links a:hover{color:var(--gold);padding-left:16px;}
+    .nav-links a.nav-cta{margin-top:16px;text-align:center;padding:15px;font-size:15px;border-bottom:none;}
     .burger{display:block;}
     .section-head h2{font-size:30px;}
   }
@@ -186,7 +192,7 @@
       <a href="#guide">Ketentuan</a>
       <a href="#book" class="nav-cta">Booking Sekarang</a>
     </nav>
-    <button class="burger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 6h16M4 18h16"/></svg></button>
+    <button class="burger" aria-label="Menu"><svg class="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 6h16M4 18h16"/></svg><svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
   </div>
 </header>
 
@@ -351,11 +357,13 @@
     burger.setAttribute('aria-expanded','false');
     burger.addEventListener('click',function(){
       var open=links.classList.toggle('open');
+      burger.classList.toggle('active',open);
       burger.setAttribute('aria-expanded',open?'true':'false');
     });
     links.querySelectorAll('a').forEach(function(a){
       a.addEventListener('click',function(){
         links.classList.remove('open');
+        burger.classList.remove('active');
         burger.setAttribute('aria-expanded','false');
       });
     });
