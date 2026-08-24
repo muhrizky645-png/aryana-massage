@@ -72,14 +72,16 @@
   .burger.active .ic-close{display:block;}
 
   /* HERO */
-  .hero{position:relative;background:linear-gradient(135deg,#0A0A0A 0%,#1A1A1A 55%,#242424 100%);color:#fff;overflow:hidden;}
-  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,75,.28),transparent 70%);}
-  .hero::before{content:"";position:absolute;left:-80px;bottom:-140px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(138,167,155,.25),transparent 70%);}
+  .hero{position:relative;background:#0A0A0A;color:#fff;overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&amp;fit=crop&amp;w=1600&amp;q=80');background-size:cover;background-position:center;filter:blur(5px) brightness(.6);transform:scale(1.1);}
+  .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(8,8,8,.92) 0%,rgba(16,16,16,.74) 50%,rgba(20,20,20,.58) 100%);}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,75,.28),transparent 70%);z-index:1;}
+  .hero::before{content:"";position:absolute;left:-80px;bottom:-140px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(138,167,155,.25),transparent 70%);z-index:1;}
   .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;padding:90px 24px 100px;}
   .hero h1{font-size:52px;margin-bottom:22px;}
   .hero p.lead{font-size:18px;color:rgba(255,255,255,.85);max-width:520px;margin-bottom:32px;}
   .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
-  .hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:30px;backdrop-filter:blur(6px);}
+  .hero-card{background:rgba(20,20,20,.55);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:30px;backdrop-filter:blur(8px);}
   .hero-card h3{font-size:22px;color:var(--gold);margin-bottom:6px;}
   .hero-card .row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);}
   .hero-card .row:last-child{border-bottom:none;}
@@ -226,6 +228,8 @@
 
 <!-- HERO -->
 <section class="hero" style="padding:0;">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
   <div class="wrap hero-inner">
     <div>
       <div class="eyebrow">Pijat Panggilan &bull; Yogyakarta</div>
