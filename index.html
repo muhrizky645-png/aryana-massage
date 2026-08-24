@@ -162,6 +162,7 @@
     .svc-grid{grid-template-columns:1fr 1fr;}
     .testi-grid,.guide-grid,.foot-grid{grid-template-columns:1fr;}
     .nav-links{display:none;}
+    .nav-links.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--cream);padding:20px 24px;border-bottom:1px solid var(--border);gap:16px;}
     .burger{display:block;}
     .section-head h2{font-size:30px;}
   }
@@ -345,10 +346,19 @@
 <script>
   var burger=document.querySelector('.burger');
   var links=document.querySelector('.nav-links');
-  if(burger){burger.addEventListener('click',function(){
-    if(links.style.display==='flex'){links.style.display='none';}
-    else{links.style.display='flex';links.style.position='absolute';links.style.top='72px';links.style.left='0';links.style.right='0';links.style.flexDirection='column';links.style.background='var(--cream)';links.style.padding='20px 24px';links.style.borderBottom='1px solid var(--border)';links.style.gap='16px';}
-  });}
+  if(burger&&links){
+    burger.setAttribute('aria-expanded','false');
+    burger.addEventListener('click',function(){
+      var open=links.classList.toggle('open');
+      burger.setAttribute('aria-expanded',open?'true':'false');
+    });
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        links.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+      });
+    });
+  }
 </script>
 </body>
 </html>
