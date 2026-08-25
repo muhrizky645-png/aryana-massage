@@ -6,47 +6,32 @@
 <title>Aryana Massage - Pijat Panggilan Profesional ke Rumah Anda</title>
 <style>
   :root{
-    --forest:#141414;      /* near-black primary */
+    --forest:#141414;
     --forest-2:#242424;
     --sage:#6E6459;
-    --gold:#D4AF37;        /* gold accent */
+    --gold:#D4AF37;
     --gold-2:#C9A24B;
-    --gold-soft:#241F13;   /* dark gold tint surface */
-    --cream:#0B0B0B;       /* dark canvas */
+    --gold-soft:#241F13;
+    --cream:#0B0B0B;
     --cream-2:#131313;
-    --ink:#F4EFE3;         /* light primary text */
+    --ink:#F4EFE3;
     --muted:#A8A096;
     --border:#2B2A26;
-    --white:#1A1A1A;       /* card surface */
+    --white:#1A1A1A;
     --radius:14px;
     --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.5);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    color:var(--ink);
-    background:var(--cream);
-    line-height:1.6;
-    font-size:16px;
-  }
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:16px;}
   h1,h2,h3,h4{font-family:Georgia,"Times New Roman",serif;line-height:1.2;letter-spacing:-.01em;}
   .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
   .accent{color:var(--gold);}
-  .eyebrow{
-    text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:700;
-    color:var(--gold);font-family:-apple-system,sans-serif;margin-bottom:14px;
-  }
-  .btn{
-    display:inline-block;background:var(--gold);color:#20240F;font-weight:700;
-    padding:14px 30px;border-radius:999px;text-decoration:none;font-size:15px;
-    transition:transform .2s ease, box-shadow .2s ease;border:none;cursor:pointer;
-  }
+  .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:700;color:var(--gold);font-family:-apple-system,sans-serif;margin-bottom:14px;}
+  .btn{display:inline-block;background:var(--gold);color:#20240F;font-weight:700;padding:14px 30px;border-radius:999px;text-decoration:none;font-size:15px;transition:transform .2s ease, box-shadow .2s ease;border:none;cursor:pointer;}
   .btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(201,162,75,.4);}
   .btn-outline{background:transparent;color:#F4EFE3;border:1.5px solid rgba(212,175,55,.6);}
   .btn-outline:hover{background:rgba(255,255,255,.12);box-shadow:none;}
-
-  /* ICONS (SVG) */
   svg{display:block;}
   .logo .mark svg,.foot-logo .mark svg{width:20px;height:20px;color:var(--gold);}
   .burger svg{width:26px;height:26px;margin:auto;color:var(--gold);}
@@ -55,8 +40,6 @@
   .about li .check svg{width:18px;height:18px;}
   .quote .stars{display:flex;gap:3px;margin-bottom:12px;}
   .quote .stars svg{width:16px;height:16px;color:var(--gold);}
-
-  /* NAV */
   header.nav{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;}
   .logo{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:22px;font-weight:700;color:var(--ink);}
@@ -70,8 +53,6 @@
   .burger .ic-close{display:none;}
   .burger.active .ic-menu{display:none;}
   .burger.active .ic-close{display:block;}
-
-  /* HERO */
   .hero{position:relative;background:#0A0A0A;color:#fff;overflow:hidden;}
   .hero-bg{position:absolute;inset:0;z-index:0;background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&amp;fit=crop&amp;w=1600&amp;q=80');background-size:cover;background-position:center;filter:blur(5px) brightness(.6);transform:scale(1.1);}
   .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(8,8,8,.92) 0%,rgba(16,16,16,.74) 50%,rgba(20,20,20,.58) 100%);}
@@ -87,14 +68,10 @@
   .hero-card .row:last-child{border-bottom:none;}
   .hero-card .ic{width:40px;height:40px;border-radius:10px;background:rgba(201,162,75,.2);display:grid;place-items:center;flex-shrink:0;}
   .hero-card .row div small{color:rgba(255,255,255,.7);font-size:13px;}
-
-  /* SECTION */
   section{padding:88px 0;}
   .section-head{text-align:center;max-width:640px;margin:0 auto 54px;}
   .section-head h2{font-size:38px;color:var(--ink);margin-bottom:14px;}
   .section-head p{color:var(--muted);font-size:17px;}
-
-  /* ABOUT */
   .about{background:var(--cream);}
   .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center;}
   .about-slider{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);background:var(--forest);}
@@ -117,15 +94,11 @@
   .about ul{list-style:none;margin-top:22px;display:grid;gap:14px;}
   .about li{display:flex;gap:12px;align-items:flex-start;}
   .about li .check{color:var(--gold);flex-shrink:0;margin-top:2px;}
-
-  /* STATS */
   .stats{background:var(--forest);color:#fff;}
   .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center;}
   .stat .num{font-family:Georgia,serif;font-size:46px;color:var(--gold);line-height:1;}
   .stat .lbl{margin-top:10px;color:rgba(255,255,255,.8);font-size:15px;}
   .stats .section-head h2{color:#fff;}
-
-  /* LOCATION */
   .location{background:var(--cream);}
   .loc-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
   .map-box{position:relative;aspect-ratio:4/3;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border);background:var(--forest);}
@@ -138,8 +111,6 @@
   .loc-list .ic svg{width:22px;height:22px;}
   .loc-list strong{display:block;color:var(--ink);font-family:-apple-system,sans-serif;font-size:16px;margin-bottom:2px;}
   .loc-list span{color:var(--muted);font-size:15px;}
-
-  /* SERVICES */
   .services{background:var(--cream-2);}
   .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   .svc{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;opacity:0;transform:translateY(46px);transition:transform .6s cubic-bezier(.22,.61,.36,1), opacity .6s ease, box-shadow .2s ease, border-color .2s ease;}
@@ -154,8 +125,6 @@
   .svc-book{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);color:var(--gold);border:1px solid var(--border);padding:10px 20px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;transition:background .2s ease,color .2s ease,border-color .2s ease;}
   .svc-book:hover{background:var(--gold);color:#20240F;border-color:var(--gold);}
   .svc-book svg{width:16px;height:16px;}
-
-  /* TESTIMONIALS */
   .testi{background:var(--cream);}
   .testi-hint{display:none;text-align:center;color:var(--muted);font-size:13px;margin-top:16px;letter-spacing:.03em;}
   .testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
@@ -164,8 +133,6 @@
   .quote .who{display:flex;align-items:center;gap:12px;}
   .quote .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#8a6d1f);color:#141414;display:grid;place-items:center;font-family:Georgia,serif;font-weight:700;}
   .quote .who small{color:var(--muted);display:block;}
-
-  /* GUIDELINES */
   .guide{background:var(--forest);color:#fff;}
   .guide .section-head h2{color:#fff;}
   .guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 40px;max-width:920px;margin:0 auto;}
@@ -173,15 +140,11 @@
   .guide-item .n{width:30px;height:30px;border-radius:50%;background:rgba(201,162,75,.22);color:var(--gold);display:grid;place-items:center;font-weight:700;flex-shrink:0;font-size:14px;}
   .guide-item p{color:rgba(255,255,255,.85);font-size:15px;}
   .guide-note{text-align:center;margin-top:36px;color:var(--gold);font-size:15px;}
-
-  /* CTA */
   .cta-band{background:linear-gradient(135deg,var(--gold),#B8892F);color:#20240F;text-align:center;}
   .cta-band h2{font-size:36px;margin-bottom:14px;color:#20240F;}
   .cta-band p{max-width:520px;margin:0 auto 28px;font-size:17px;color:#3a3410;}
   .cta-band .btn{background:var(--forest);color:#fff;}
   .cta-band .btn:hover{background:var(--forest-2);box-shadow:0 8px 22px rgba(15,61,62,.35);}
-
-  /* FOOTER */
   footer{background:#050505;color:rgba(255,255,255,.8);padding:60px 0 30px;}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px;}
   footer h4{color:#fff;margin-bottom:16px;font-size:18px;}
@@ -190,8 +153,6 @@
   .foot-logo{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:22px;color:#fff;margin-bottom:16px;}
   .foot-logo .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--forest),var(--forest-2));display:grid;place-items:center;color:var(--gold);}
   .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;text-align:center;font-size:14px;color:rgba(255,255,255,.55);}
-
-  /* RESPONSIVE */
   @media(max-width:860px){
     .hero-inner,.about-grid,.loc-grid{grid-template-columns:1fr;}
     .hero-inner{gap:32px;padding:64px 24px 72px;}
@@ -240,7 +201,6 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero" style="padding:0;">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
@@ -264,7 +224,6 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="about" id="about">
   <div class="wrap about-grid">
     <div class="about-slider" id="aboutSlider">
@@ -298,7 +257,6 @@
   </div>
 </section>
 
-<!-- STATS -->
 <section class="stats">
   <div class="wrap">
     <div class="section-head">
@@ -314,7 +272,6 @@
   </div>
 </section>
 
-<!-- LOCATION -->
 <section class="location" id="location">
   <div class="wrap loc-grid">
     <div class="map-box">
@@ -334,7 +291,6 @@
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="services" id="services">
   <div class="wrap">
     <div class="section-head">
@@ -343,21 +299,20 @@
       <p>Kombinasi terapis berpengalaman dan produk alami pilihan untuk mengusir penat, meredakan otot kaku, dan mengembalikan energi segar Anda.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&amp;fit=crop&amp;w=600&amp;q=80');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/><path d="m8 8 1.88 1.88M14.12 9.88 16 8m-8 8 1.88-1.88M14.12 14.12 16 16"/></svg></div><h4>Javanese Relaxing Massage</h4><p>Relaksasi tradisional untuk melepas pegal &amp; penat harian.</p><a href="#book" class="svc-book" data-service="Javanese Relaxing Massage"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Booking</a></div></div>
-      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&amp;fit=crop&amp;w=600&amp;q=80');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4M4 13h4"/></svg></div><h4>Reflexiology</h4><p>Pijat titik saraf untuk melancarkan peredaran &amp; meningkatkan energi tubuh.</p><a href="#book" class="svc-book" data-service="Reflexiology"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Booking</a></div></div>
-      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;w=600&amp;q=80');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 14.34A2 2 0 0 0 8.66 13L4.5 11.6a.5.5 0 0 1 0-.95L8.66 9.2a2 2 0 0 0 1.28-1.28L11.34 3.5a.5.5 0 0 1 .95 0l1.4 4.42a2 2 0 0 0 1.28 1.28l4.16 1.45a.5.5 0 0 1 0 .95l-4.16 1.34a2 2 0 0 0-1.28 1.28l-1.4 4.42a.5.5 0 0 1-.95 0z"/><path d="M20 3v4M22 5h-4M4 17v2M5 18H3"/></svg></div><h4>Premium Combination</h4><p>Body Massage + Refleksi + Totok Wajah dalam 1 sesi lengkap.</p><a href="#book" class="svc-book" data-service="Premium Combination"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Booking</a></div></div>
-      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&amp;fit=crop&amp;w=600&amp;q=80');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><h4>Prenatal Massage</h4><p>Pijat lembut untuk mengurangi pegal &amp; membuat tubuh ibu hamil lebih nyaman.</p><a href="#book" class="svc-book" data-service="Prenatal Massage"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Booking</a></div></div>
-      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&amp;fit=crop&amp;w=600&amp;q=80&amp;sat=-30');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C3 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div><h4>Massage &amp; Body Scrub</h4><p>Relaksasi + perawatan kulit agar lebih halus &amp; segar.</p><a href="#book" class="svc-book" data-service="Massage &amp; Body Scrub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Booking</a></div></div>
-      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&amp;fit=crop&amp;w=600&amp;q=80&amp;sat=-30');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4M4 13h4"/></svg></div><h4>Massage Kerik Therapy</h4><p>Solusi untuk masuk angin, badan berat &amp; pegal intens.</p><a href="#book" class="svc-book" data-service="Massage Kerik Therapy"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Booking</a></div></div>
-      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;w=600&amp;q=80&amp;sat=-30');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div><h4>Deep Tissue Massage</h4><p>Tekanan dalam untuk mengatasi otot tegang &amp; pegal kronis.</p><a href="#book" class="svc-book" data-service="Deep Tissue Massage"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Booking</a></div></div>
-      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&amp;fit=crop&amp;w=600&amp;q=80&amp;sat=-30');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2m10.5-11.4A2 2 0 1 1 14 8H2m15.5 9.6A2 2 0 1 0 19 14H2"/></svg></div><h4>Thai Stretching Massage</h4><p>Kombinasi stretching &amp; tekanan untuk tubuh lebih ringan &amp; fleksibel.</p><a href="#book" class="svc-book" data-service="Thai Stretching Massage"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Booking</a></div></div>
-      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&amp;fit=crop&amp;w=600&amp;q=80&amp;blur=0');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><h4>Signature Massage</h4><p>Perpaduan Thai Massage + Deep Tissue untuk hasil paling maksimal.</p><a href="#book" class="svc-book" data-service="Signature Massage"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Booking</a></div></div>
-      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&amp;fit=crop&amp;w=600&amp;q=80&amp;sat=-40');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h4>Bekam / Cupping Therapy</h4><p>Terapi bekam untuk melancarkan peredaran darah, meredakan pegal &amp; sakit kepala, serta membantu detoks tubuh. Alat steril sekali pakai.</p><a href="#book" class="svc-book" data-service="Bekam / Cupping Therapy"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Booking</a></div></div>
+      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&amp;fit=crop&amp;w=600&amp;q=80');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/><path d="m8 8 1.88 1.88M14.12 9.88 16 8m-8 8 1.88-1.88M14.12 14.12 16 16"/></svg></div><h4>Javanese Relaxing Massage</h4><p>Relaksasi tradisional untuk melepas pegal &amp; penat harian.</p><a href="#book" class="svc-book" data-service="Javanese Relaxing Massage">Booking</a></div></div>
+      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&amp;fit=crop&amp;w=600&amp;q=80');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4M4 13h4"/></svg></div><h4>Reflexiology</h4><p>Pijat titik saraf untuk melancarkan peredaran &amp; meningkatkan energi tubuh.</p><a href="#book" class="svc-book" data-service="Reflexiology">Booking</a></div></div>
+      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;w=600&amp;q=80');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 14.34A2 2 0 0 0 8.66 13L4.5 11.6a.5.5 0 0 1 0-.95L8.66 9.2a2 2 0 0 0 1.28-1.28L11.34 3.5a.5.5 0 0 1 .95 0l1.4 4.42a2 2 0 0 0 1.28 1.28l4.16 1.45a.5.5 0 0 1 0 .95l-4.16 1.34a2 2 0 0 0-1.28 1.28l-1.4 4.42a.5.5 0 0 1-.95 0z"/><path d="M20 3v4M22 5h-4M4 17v2M5 18H3"/></svg></div><h4>Premium Combination</h4><p>Body Massage + Refleksi + Totok Wajah dalam 1 sesi lengkap.</p><a href="#book" class="svc-book" data-service="Premium Combination">Booking</a></div></div>
+      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&amp;fit=crop&amp;w=600&amp;q=80');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><h4>Prenatal Massage</h4><p>Pijat lembut untuk mengurangi pegal &amp; membuat tubuh ibu hamil lebih nyaman.</p><a href="#book" class="svc-book" data-service="Prenatal Massage">Booking</a></div></div>
+      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&amp;fit=crop&amp;w=600&amp;q=80&amp;sat=-30');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C3 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div><h4>Massage &amp; Body Scrub</h4><p>Relaksasi + perawatan kulit agar lebih halus &amp; segar.</p><a href="#book" class="svc-book" data-service="Massage &amp; Body Scrub">Booking</a></div></div>
+      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&amp;fit=crop&amp;w=600&amp;q=80&amp;sat=-30');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4M4 13h4"/></svg></div><h4>Massage Kerik Therapy</h4><p>Solusi untuk masuk angin, badan berat &amp; pegal intens.</p><a href="#book" class="svc-book" data-service="Massage Kerik Therapy">Booking</a></div></div>
+      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;w=600&amp;q=80&amp;sat=-30');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div><h4>Deep Tissue Massage</h4><p>Tekanan dalam untuk mengatasi otot tegang &amp; pegal kronis.</p><a href="#book" class="svc-book" data-service="Deep Tissue Massage">Booking</a></div></div>
+      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&amp;fit=crop&amp;w=600&amp;q=80&amp;sat=-30');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2m10.5-11.4A2 2 0 1 1 14 8H2m15.5 9.6A2 2 0 1 0 19 14H2"/></svg></div><h4>Thai Stretching Massage</h4><p>Kombinasi stretching &amp; tekanan untuk tubuh lebih ringan &amp; fleksibel.</p><a href="#book" class="svc-book" data-service="Thai Stretching Massage">Booking</a></div></div>
+      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&amp;fit=crop&amp;w=600&amp;q=80&amp;blur=0');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><h4>Signature Massage</h4><p>Perpaduan Thai Massage + Deep Tissue untuk hasil paling maksimal.</p><a href="#book" class="svc-book" data-service="Signature Massage">Booking</a></div></div>
+      <div class="svc"><div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&amp;fit=crop&amp;w=600&amp;q=80&amp;sat=-40');"></div><div class="svc-body"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h4>Bekam / Cupping Therapy</h4><p>Terapi bekam untuk melancarkan peredaran darah, meredakan pegal &amp; sakit kepala, serta membantu detoks tubuh. Alat steril sekali pakai.</p><a href="#book" class="svc-book" data-service="Bekam / Cupping Therapy">Booking</a></div></div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section class="testi" id="testi">
   <div class="wrap">
     <div class="section-head">
@@ -365,16 +320,15 @@
       <h2>Cerita dari Pelanggan Kami</h2>
     </div>
     <div class="testi-grid">
-      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Selain pijatannya mantap, aku suka banget aroma minyak aromaterapinya. Bikin rileks dan gak lengket di kulit. Habis treatment tidur jadi nyenyak banget!"</p><div class="who"><div class="av">D</div><div><strong>Dewi</strong><small>Bantul</small></div></div></div>
-      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Capek banget habis keliling seharian, untung nemu Aryana. Terapisnya bisa dipanggil langsung ke hotel. Kamar langsung terasa seperti spa bintang lima!"</p><div class="who"><div class="av">N</div><div><strong>Nurul Anjani</strong><small>Yogyakarta</small></div></div></div>
-      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Sangat puas dengan pelayanannya. Terapisnya ramah, sopan, dan pijatannya benar-benar terasa di titik otot yang pegal. Pengalaman spa yang memorable."</p><div class="who"><div class="av">C</div><div><strong>Cindy</strong><small>Sleman</small></div></div></div>
-      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Gak perlu macet-macetan keluar rumah. Tinggal booking, terapis langsung datang. Perlengkapannya lengkap dan higienis. Badan yang kaku langsung enteng lagi!"</p><div class="who"><div class="av">R</div><div><strong>Ryan</strong><small>Yogyakarta</small></div></div></div>
+      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Selain pijatannya mantap, aku suka banget aroma minyak aromaterapinya. Bikin rileks dan gak lengket di kulit. Habis treatment tidur jadi nyenyak banget!"</p><div class="who"><div class="av">D</div><div><strong>Dewi</strong><small>Bantul</small></div></div></div>
+      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Capek banget habis keliling seharian, untung nemu Aryana. Terapisnya bisa dipanggil langsung ke hotel. Kamar langsung terasa seperti spa bintang lima!"</p><div class="who"><div class="av">N</div><div><strong>Nurul Anjani</strong><small>Yogyakarta</small></div></div></div>
+      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Sangat puas dengan pelayanannya. Terapisnya ramah, sopan, dan pijatannya benar-benar terasa di titik otot yang pegal. Pengalaman spa yang memorable."</p><div class="who"><div class="av">C</div><div><strong>Cindy</strong><small>Sleman</small></div></div></div>
+      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Gak perlu macet-macetan keluar rumah. Tinggal booking, terapis langsung datang. Perlengkapannya lengkap dan higienis. Badan yang kaku langsung enteng lagi!"</p><div class="who"><div class="av">R</div><div><strong>Ryan</strong><small>Yogyakarta</small></div></div></div>
     </div>
     <div class="testi-hint">&larr; Geser untuk melihat lebih banyak &rarr;</div>
   </div>
 </section>
 
-<!-- GUIDELINES -->
 <section class="guide" id="guide">
   <div class="wrap">
     <div class="section-head">
@@ -394,7 +348,6 @@
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-band" id="book">
   <div class="wrap">
     <h2>Siap Merasakan Ketenangan Aryana?</h2>
@@ -403,7 +356,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -421,4 +373,82 @@
       </div>
       <div>
         <h4>Kontak</h4>
-        <a href="https://wa.me/6283165262513" target="_blank" rel="noopener">What
+        <a href="https://wa.me/6283165262513" target="_blank" rel="noopener">WhatsApp: 0831-6526-2513</a>
+        <a href="#location">Yogyakarta &amp; Sekitarnya</a>
+        <a href="#">Setiap hari &bull; 09.00 - 23.00 WIB</a>
+        <a href="https://instagram.com/aryanamassage" target="_blank" rel="noopener">Instagram: @aryanamassage</a>
+      </div>
+    </div>
+    <div class="foot-bottom">&copy; 2026 Aryana Massage. Seluruh hak cipta dilindungi.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var burger=document.querySelector('.burger');
+  var navLinks=document.querySelector('.nav-links');
+  if(burger&&navLinks){
+    burger.addEventListener('click',function(){
+      burger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        burger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+  }
+
+  var slider=document.getElementById('aboutSlider');
+  if(slider){
+    var slides=slider.querySelectorAll('.slide');
+    var dots=slider.querySelectorAll('.dots button');
+    var idx=0,timer;
+    function show(i){
+      idx=(i+slides.length)%slides.length;
+      slides.forEach(function(s,n){s.classList.toggle('active',n===idx);});
+      dots.forEach(function(d,n){d.classList.toggle('active',n===idx);});
+    }
+    function restart(){clearInterval(timer);timer=setInterval(function(){show(idx+1);},5000);}
+    dots.forEach(function(d,n){d.addEventListener('click',function(){show(n);restart();});});
+    var nx=slider.querySelector('.nav-arrow.next');
+    var pv=slider.querySelector('.nav-arrow.prev');
+    if(nx)nx.addEventListener('click',function(){show(idx+1);restart();});
+    if(pv)pv.addEventListener('click',function(){show(idx-1);restart();});
+    restart();
+  }
+
+  var svcs=document.querySelectorAll('.svc');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('reveal');io.unobserve(e.target);}
+      });
+    },{threshold:0.15});
+    svcs.forEach(function(s){io.observe(s);});
+  }else{
+    svcs.forEach(function(s){s.classList.add('reveal');});
+  }
+
+  var WA='6283165262513';
+  var waIcon='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>';
+  function waLink(msg){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(msg);}
+  var generalMsg='Halo Aryana Massage! \uD83D\uDC4B Saya ingin memesan layanan pijat panggilan ke lokasi saya. Boleh dibantu info layanan yang tersedia, jadwal, dan biayanya ya? Terima kasih \uD83D\uDE4F';
+  document.querySelectorAll('.svc-book[data-service]').forEach(function(a){
+    var svc=a.getAttribute('data-service');
+    var msg='Halo Aryana Massage! \uD83D\uDC4B Saya tertarik untuk memesan layanan *'+svc+'*. Boleh dibantu info ketersediaan jadwal, area layanan, dan biayanya ya? Terima kasih \uD83D\uDE4F';
+    a.setAttribute('href',waLink(msg));
+    a.setAttribute('target','_blank');
+    a.setAttribute('rel','noopener');
+    a.innerHTML=waIcon+' Booking';
+  });
+  document.querySelectorAll('[data-wa-general]').forEach(function(a){
+    a.setAttribute('href',waLink(generalMsg));
+    a.setAttribute('target','_blank');
+    a.setAttribute('rel','noopener');
+  });
+})();
+</script>
+</body>
+</html>
