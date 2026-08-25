@@ -116,7 +116,8 @@
   .svc{background:var(--white);border:1.5px solid var(--gold);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;opacity:0;transform:translateY(46px);transition:transform .6s cubic-bezier(.22,.61,.36,1), opacity .6s ease, box-shadow .2s ease, border-color .2s ease;box-shadow:0 0 0 1px rgba(212,175,55,.15);}
   .svc.reveal{opacity:1;transform:translateY(0);}
   .svc:hover{transform:translateY(-6px);box-shadow:0 0 0 1px rgba(212,175,55,.35), var(--shadow);border-color:var(--gold-2);}
-  .svc-img{position:relative;height:180px;background-size:cover;background-position:center;background-color:var(--forest);}
+  .svc:hover .svc-img{transform:scale(1.08);}
+  .svc-img{position:relative;height:180px;background-size:cover;background-position:center;background-color:var(--forest);overflow:hidden;transition:transform .5s ease;}
   .svc-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(11,11,11,.65));}
   .svc-body{padding:0 28px 28px;display:flex;flex-direction:column;flex:1;}
   .svc .ic{width:52px;height:52px;border-radius:12px;background:var(--gold-soft);border:1px solid var(--border);display:grid;place-items:center;margin:-26px 0 16px;position:relative;z-index:2;}
@@ -153,6 +154,11 @@
   .foot-logo{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:22px;color:#fff;margin-bottom:16px;}
   .foot-logo .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--forest),var(--forest-2));display:grid;place-items:center;color:var(--gold);}
   .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;text-align:center;font-size:14px;color:rgba(255,255,255,.55);}
+  .rating-badge{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:rgba(255,255,255,.08);border:1px solid rgba(212,175,55,.35);padding:8px 16px;border-radius:999px;font-size:14px;color:#fff;}
+  .rating-badge svg{width:16px;height:16px;color:var(--gold);}
+  .rating-badge strong{color:var(--gold);}
+  .reveal-fade{opacity:0;transform:translateY(30px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal-fade.reveal{opacity:1;transform:translateY(0);}
   .wa-float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:12px;}
   .wa-bubble{background:#fff;color:#1A1A1A;padding:10px 16px;border-radius:12px;font-size:14px;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.25);position:relative;opacity:0;transform:translateY(8px) scale(.95);pointer-events:none;transition:opacity .3s ease, transform .3s ease;white-space:nowrap;}
   .wa-bubble.show{opacity:1;transform:translateY(0) scale(1);}
@@ -193,6 +199,9 @@
   }
   @media (prefers-reduced-motion: reduce){
     .svc{opacity:1;transform:none;transition:box-shadow .2s ease,border-color .2s ease;}
+    .svc-img{transition:none;}
+    .svc:hover .svc-img{transform:none;}
+    .reveal-fade{opacity:1;transform:none;transition:none;}
   }
 </style>
 </head>
@@ -225,6 +234,7 @@
         <a href="#book" class="btn" data-wa-general>Pesan Terapis</a>
         <a href="#services" class="btn btn-outline">Lihat Layanan</a>
       </div>
+      <div class="rating-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><strong>5.0</strong>&nbsp;Google Rating</div>
     </div>
     <div class="hero-card">
       <h3>Kenapa Aryana?</h3>
@@ -237,7 +247,7 @@
 </section>
 
 <section class="about" id="about">
-  <div class="wrap about-grid">
+  <div class="wrap about-grid reveal-fade">
     <div class="about-slider" id="aboutSlider">
       <div class="slides">
         <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80');"></div>
@@ -275,11 +285,11 @@
       <div class="eyebrow">Pilihan Terbaik untuk Anda</div>
       <h2>Dipercaya Ribuan Pelanggan</h2>
     </div>
-    <div class="stats-grid">
-      <div class="stat"><div class="num">12+</div><div class="lbl">Menu Treatment</div></div>
-      <div class="stat"><div class="num">1.500+</div><div class="lbl">Happy Clients</div></div>
-      <div class="stat"><div class="num">96%</div><div class="lbl">Repeat Customers</div></div>
-      <div class="stat"><div class="num">5.0</div><div class="lbl">Google Rating</div></div>
+    <div class="stats-grid reveal-fade">
+      <div class="stat"><div class="num" data-target="12" data-suffix="+">0</div><div class="lbl">Menu Treatment</div></div>
+      <div class="stat"><div class="num" data-target="1500" data-suffix="+" data-format="dot">0</div><div class="lbl">Happy Clients</div></div>
+      <div class="stat"><div class="num" data-target="96" data-suffix="%">0</div><div class="lbl">Repeat Customers</div></div>
+      <div class="stat"><div class="num" data-target="5" data-decimals="1">0.0</div><div class="lbl">Google Rating</div></div>
     </div>
   </div>
 </section>
@@ -332,7 +342,7 @@
       <div class="eyebrow">Kata Mereka</div>
       <h2>Cerita dari Pelanggan Kami</h2>
     </div>
-    <div class="testi-grid">
+    <div class="testi-grid reveal-fade">
       <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Selain pijatannya mantap, aku suka banget aroma minyak aromaterapinya. Bikin rileks dan gak lengket di kulit. Habis treatment tidur jadi nyenyak banget!"</p><div class="who"><div class="av">D</div><div><strong>Dewi</strong><small>Bantul</small></div></div></div>
       <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Capek banget habis keliling seharian, untung nemu Aryana. Terapisnya bisa dipanggil langsung ke hotel. Kamar langsung terasa seperti spa bintang lima!"</p><div class="who"><div class="av">N</div><div><strong>Nurul Anjani</strong><small>Yogyakarta</small></div></div></div>
       <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"Sangat puas dengan pelayanannya. Terapisnya ramah, sopan, dan pijatannya benar-benar terasa di titik otot yang pegal. Pengalaman spa yang memorable."</p><div class="who"><div class="av">C</div><div><strong>Cindy</strong><small>Sleman</small></div></div></div>
@@ -437,16 +447,52 @@
     restart();
   }
 
-  var svcs=document.querySelectorAll('.svc');
+  var revealEls=document.querySelectorAll('.svc, .reveal-fade');
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(entries){
       entries.forEach(function(e){
         if(e.isIntersecting){e.target.classList.add('reveal');io.unobserve(e.target);}
       });
     },{threshold:0.15});
-    svcs.forEach(function(s){io.observe(s);});
+    revealEls.forEach(function(el){io.observe(el);});
   }else{
-    svcs.forEach(function(s){s.classList.add('reveal');});
+    revealEls.forEach(function(el){el.classList.add('reveal');});
+  }
+
+  function animateCount(el){
+    var target=parseFloat(el.getAttribute('data-target'))||0;
+    var suffix=el.getAttribute('data-suffix')||'';
+    var decimals=parseInt(el.getAttribute('data-decimals')||'0',10);
+    var useDot=el.getAttribute('data-format')==='dot';
+    var duration=1400;
+    var startTime=null;
+    function format(val){
+      if(decimals>0)return val.toFixed(decimals);
+      var intVal=Math.floor(val).toString();
+      if(useDot)intVal=intVal.replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+      return intVal;
+    }
+    function step(ts){
+      if(!startTime)startTime=ts;
+      var progress=Math.min((ts-startTime)/duration,1);
+      var eased=1-Math.pow(1-progress,3);
+      el.textContent=format(target*eased)+suffix;
+      if(progress<1){requestAnimationFrame(step);}else{el.textContent=format(target)+suffix;}
+    }
+    requestAnimationFrame(step);
+  }
+  var counters=document.querySelectorAll('.num[data-target]');
+  if(counters.length){
+    if('IntersectionObserver' in window){
+      var counterIO=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){animateCount(e.target);counterIO.unobserve(e.target);}
+        });
+      },{threshold:0.4});
+      counters.forEach(function(el){counterIO.observe(el);});
+    }else{
+      counters.forEach(function(el){animateCount(el);});
+    }
   }
 
   var WA='6283165262513';
