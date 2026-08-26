@@ -1,0 +1,11 @@
+# Prevent execution of scripts uploaded to this folder (security hardening)
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|pl|py|cgi|asp|aspx|sh|exe)$">
+  Require all denied
+  Deny from all
+</FilesMatch>
+<IfModule mod_php7.c>
+  php_flag engine off
+</IfModule>
+<IfModule mod_php.c>
+  php_flag engine off
+</IfModule>

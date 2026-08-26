@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "eyebrow": "Pijat Panggilan • Yogyakarta",
+    "titleMain": "Relaksasi Bintang Lima, ",
+    "titleAccent": "Langsung di Rumah Anda",
+    "lead": "Tidak perlu keluar rumah atau menembus kemacetan. Terapis tersertifikasi Aryana Massage siap menghadirkan ketenangan dan kebugaran ke tempat Anda beristirahat."
+  },
+  "aboutBadgeYears": "10+ Tahun",
+  "slides": [
+    {"image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80"},
+    {"image": "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&q=80"},
+    {"image": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80"},
+    {"image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80"}
+  ],
+  "services": [
+    {"title":"Javanese Relaxing Massage","description":"Relaksasi tradisional untuk melepas pegal & penat harian.","image":"https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80"},
+    {"title":"Reflexiology","description":"Pijat titik saraf untuk melancarkan peredaran & meningkatkan energi tubuh.","image":"https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80"},
+    {"title":"Premium Combination","description":"Body Massage + Refleksi + Totok Wajah dalam 1 sesi lengkap.","image":"https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"},
+    {"title":"Prenatal Massage","description":"Pijat lembut untuk mengurangi pegal & membuat tubuh ibu hamil lebih nyaman.","image":"https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=600&q=80"},
+    {"title":"Massage & Body Scrub","description":"Relaksasi + perawatan kulit agar lebih halus & segar.","image":"https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80&sat=-30"},
+    {"title":"Massage Kerik Therapy","description":"Solusi untuk masuk angin, badan berat & pegal intens.","image":"https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80&sat=-30"},
+    {"title":"Deep Tissue Massage","description":"Tekanan dalam untuk mengatasi otot tegang & pegal kronis.","image":"https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80&sat=-30"},
+    {"title":"Thai Stretching Massage","description":"Kombinasi stretching & tekanan untuk tubuh lebih ringan & fleksibel.","image":"https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=600&q=80&sat=-30"},
+    {"title":"Signature Massage","description":"Perpaduan Thai Massage + Deep Tissue untuk hasil paling maksimal.","image":"https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80&blur=0"},
+    {"title":"Bekam / Cupping Therapy","description":"Terapi bekam untuk melancarkan peredaran darah, meredakan pegal & sakit kepala, serta membantu detoks tubuh. Alat steril sekali pakai.","image":"https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=600&q=80&sat=-40"},
+    {"title":"Kids Massage","description":"Pijat lembut & aman khusus untuk anak-anak, membantu tidur lebih nyenyak dan badan lebih rileks.","image":"https://images.unsplash.com/photo-1519824145371-296895a0f9a2?auto=format&fit=crop&w=600&q=80"}
+  ],
+  "testimonials": [
+    {"quote":"Selain pijatannya mantap, aku suka banget aroma minyak aromaterapinya. Bikin rileks dan gak lengket di kulit. Habis treatment tidur jadi nyenyak banget!","name":"Dewi","location":"Bantul"},
+    {"quote":"Capek banget habis keliling seharian, untung nemu Aryana. Terapisnya bisa dipanggil langsung ke hotel. Kamar langsung terasa seperti spa bintang lima!","name":"Nurul Anjani","location":"Yogyakarta"},
+    {"quote":"Sangat puas dengan pelayanannya. Terapisnya ramah, sopan, dan pijatannya benar-benar terasa di titik otot yang pegal. Pengalaman spa yang memorable.","name":"Cindy","location":"Sleman"},
+    {"quote":"Gak perlu macet-macetan keluar rumah. Tinggal booking, terapis langsung datang. Perlengkapannya lengkap dan higienis. Badan yang kaku langsung enteng lagi!","name":"Ryan","location":"Yogyakarta"}
+  ],
+  "contact": {
+    "whatsapp": "6283165262513",
+    "whatsappDisplay": "0831-6526-2513",
+    "address": "Yogyakarta & Sekitarnya, Indonesia"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/profile.php?id=61586809032587&mibextid=rS40aB7S9Ucbxw6v",
+    "tiktok": "https://www.tiktok.com/@aryanaspamassage6?_r=1&_t=ZS-99C8hV5fm1Y",
+    "instagram": "https://www.instagram.com/spaaryana?igsi=MTdrMWZlbjB1YmczYQ=="
+  },
+  "footer": {
+    "description": "Buat jadwal sekarang juga, jangan sampai telat, terapis terbatas.",
+    "copyright": "© 2026 Aryana Massage. Seluruh hak cipta dilindungi."
+  }
+}
