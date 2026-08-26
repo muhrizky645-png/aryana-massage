@@ -36,22 +36,7 @@ $svcIcons = [
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Aryana Massage - Pijat Panggilan Profesional ke Rumah Anda</title>
 <style>
-  :root{
-    --forest:#141414;
-    --forest-2:#242424;
-    --sage:#6E6459;
-    --gold:#D4AF37;
-    --gold-2:#C9A24B;
-    --gold-soft:#241F13;
-    --cream:#0B0B0B;
-    --cream-2:#131313;
-    --ink:#F4EFE3;
-    --muted:#A8A096;
-    --border:#2B2A26;
-    --white:#1A1A1A;
-    --radius:14px;
-    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.5);
-  }
+  :root{--forest:#141414;--forest-2:#242424;--sage:#6E6459;--gold:#D4AF37;--gold-2:#C9A24B;--gold-soft:#241F13;--cream:#0B0B0B;--cream-2:#131313;--ink:#F4EFE3;--muted:#A8A096;--border:#2B2A26;--white:#1A1A1A;--radius:14px;--shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.5);}
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:16px;}
@@ -170,4 +155,364 @@ $svcIcons = [
   footer a:hover{color:var(--gold);}
   .foot-logo{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:22px;color:#fff;margin-bottom:16px;}
   .foot-logo .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--forest),var(--forest-2));display:grid;place-items:center;color:var(--gold);}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;text-align:center;font-size:14px;color:rg
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;text-align:center;font-size:14px;color:rgba(255,255,255,.55);}
+  .foot-center{text-align:center;}
+  .foot-center .eyebrow{margin-bottom:12px;}
+  .foot-contact-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px;color:rgba(255,255,255,.85);font-size:15px;}
+  .foot-contact-row svg{width:16px;height:16px;color:var(--gold);flex-shrink:0;}
+  .foot-contact-row a{display:inline;margin:0;color:rgba(255,255,255,.85);}
+  .foot-contact-row a:hover{color:var(--gold);}
+  .foot-social{display:flex;justify-content:center;gap:14px;margin:0 0 36px;}
+  .foot-social a{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(212,175,55,.5);display:grid;place-items:center;color:var(--gold);margin:0;transition:background .2s ease,transform .2s ease;}
+  .foot-social a:hover{background:rgba(212,175,55,.15);transform:translateY(-3px);}
+  .foot-social svg{width:20px;height:20px;}
+  .foot-nav{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;padding-top:28px;margin-top:6px;border-top:1px solid rgba(255,255,255,.12);}
+  .foot-nav a{display:inline-block;margin:0;}
+  @media(max-width:520px){.foot-nav{gap:16px;font-size:14px;}}
+  .rating-badge{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:rgba(255,255,255,.08);border:1px solid rgba(212,175,55,.35);padding:8px 16px;border-radius:999px;font-size:14px;color:#fff;}
+  .rating-badge svg{width:16px;height:16px;color:var(--gold);}
+  .rating-badge strong{color:var(--gold);}
+  .reveal-fade{opacity:0;transform:translateY(30px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal-fade.reveal{opacity:1;transform:translateY(0);}
+  .wa-float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:12px;}
+  .wa-bubble{background:#fff;color:#1A1A1A;padding:10px 16px;border-radius:12px;font-size:14px;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.25);position:relative;opacity:0;transform:translateY(8px) scale(.95);pointer-events:none;transition:opacity .3s ease, transform .3s ease;white-space:nowrap;}
+  .wa-bubble.show{opacity:1;transform:translateY(0) scale(1);}
+  .wa-bubble::after{content:"";position:absolute;right:-6px;top:50%;transform:translateY(-50%);border-width:6px 0 6px 6px;border-style:solid;border-color:transparent transparent transparent #fff;}
+  .wa-btn{width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.35);text-decoration:none;flex-shrink:0;animation:waPulse 2.4s ease-in-out infinite;transition:transform .2s ease;}
+  .wa-btn:hover{transform:scale(1.06);}
+  .wa-btn svg{width:32px;height:32px;color:#fff;}
+  @keyframes waPulse{0%,100%{box-shadow:0 6px 20px rgba(0,0,0,.35),0 0 0 0 rgba(37,211,102,.55);}50%{box-shadow:0 6px 20px rgba(0,0,0,.35),0 0 0 10px rgba(37,211,102,0);}}
+  @media(max-width:860px){
+    .hero-inner,.about-grid{grid-template-columns:1fr;}
+    .hero-inner{gap:32px;padding:64px 24px 72px;}
+    .hero h1{font-size:38px;}
+    .stats-grid{grid-template-columns:repeat(2,1fr);gap:36px 20px;}
+    .svc-grid{grid-template-columns:1fr 1fr;}
+    .guide-grid{grid-template-columns:1fr;}
+    .testi-grid{display:flex;grid-template-columns:none;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin:0 -24px;padding:4px 24px 18px;scrollbar-width:none;}
+    .testi-grid::-webkit-scrollbar{display:none;}
+    .testi .quote{scroll-snap-align:center;flex:0 0 84%;padding:24px;}
+    .testi .quote p{font-size:15px;}
+    .testi-hint{display:block;}
+    .nav-links{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 24px 44px rgba(0,0,0,.55);padding:10px 18px 22px;align-items:stretch;opacity:0;visibility:hidden;transform:translateY(-12px);pointer-events:none;transition:opacity .24s ease,transform .24s ease,visibility .24s ease;}
+    .nav-links.open{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;}
+    .nav-links a{color:var(--ink);font-size:16px;font-weight:500;padding:15px 10px;text-align:left;border-bottom:1px solid var(--border);transition:color .2s ease,padding-left .2s ease;}
+    .nav-links a:hover{color:var(--gold);padding-left:16px;}
+    .nav-links a.nav-cta{margin-top:16px;text-align:center;padding:15px;font-size:15px;border-bottom:none;}
+    .burger{display:block;}
+    .section-head h2{font-size:30px;}
+  }
+  @media(max-width:520px){
+    .svc-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:32px;}
+    section{padding:60px 0;}
+    .testi .quote{flex:0 0 88%;}
+    .wa-float{right:16px;bottom:16px;}
+    .wa-btn{width:54px;height:54px;}
+    .wa-btn svg{width:26px;height:26px;}
+    .wa-bubble{font-size:13px;padding:8px 14px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .svc{opacity:1;transform:none;transition:box-shadow .2s ease,border-color .2s ease;}
+    .svc-img{transition:none;}
+    .svc:hover .svc-img{transform:none;}
+    .reveal-fade{opacity:1;transform:none;transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/><path d="m8 8 1.88 1.88M14.12 9.88 16 8m-8 8 1.88-1.88M14.12 14.12 16 16"/></svg></span> Aryana <span class="accent">Massage</span></div>
+    <nav class="nav-links">
+      <a href="#about">Tentang</a>
+      <a href="#services">Layanan</a>
+      <a href="#testi">Testimoni</a>
+      <a href="#guide">Ketentuan</a>
+      <a href="#book" class="nav-cta" data-wa-general>Booking Sekarang</a>
+    </nav>
+    <button class="burger" aria-label="Menu"><svg class="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 6h16M4 18h16"/></svg><svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+</header>
+
+<section class="hero" style="padding:0;">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow"><?= h($hero['eyebrow'] ?? 'Pijat Panggilan • Yogyakarta') ?></div>
+      <h1><?= h($hero['titleMain'] ?? 'Relaksasi Bintang Lima, ') ?><span class="accent"><?= h($hero['titleAccent'] ?? 'Langsung di Rumah Anda') ?></span></h1>
+      <p class="lead"><?= h($hero['lead'] ?? 'Tidak perlu keluar rumah atau menembus kemacetan. Terapis tersertifikasi Aryana Massage siap menghadirkan ketenangan dan kebugaran ke tempat Anda beristirahat.') ?></p>
+      <div class="hero-actions">
+        <a href="#book" class="btn" data-wa-general>Pesan Terapis</a>
+        <a href="#services" class="btn btn-outline">Lihat Layanan</a>
+      </div>
+      <div class="rating-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg><strong>5.0</strong>&nbsp;Google Rating</div>
+    </div>
+    <div class="hero-card">
+      <h3>Kenapa Aryana?</h3>
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg></div><div><strong>Terapis Tersertifikasi</strong><br><small>Berpengalaman, profesional dan bersertifikat</small></div></div>
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div><div><strong>Datang ke Lokasi Anda</strong><br><small>Rumah, hotel, atau vila di seluruh Jogja</small></div></div>
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div><div><strong>Produk Alami Pilihan</strong><br><small>Aromaterapi lembut &amp; tidak lengket</small></div></div>
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><div><strong>Higienis &amp; Aman</strong><br><small>Perlengkapan lengkap &amp; steril</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid reveal-fade">
+    <div class="about-slider" id="aboutSlider">
+      <div class="slides">
+<?php if (!empty($slides)): foreach ($slides as $i => $s): ?>
+        <div class="slide<?= $i === 0 ? ' active' : '' ?>" style="background-image:url('<?= h($s['image'] ?? '') ?>');"></div>
+<?php endforeach; else: ?>
+        <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80');"></div>
+<?php endif; ?>
+      </div>
+      <div class="dots">
+<?php if (!empty($slides)): foreach ($slides as $i => $s): ?>
+        <button class="<?= $i === 0 ? 'active' : '' ?>" aria-label="Slide <?= $i + 1 ?>"></button>
+<?php endforeach; else: ?>
+        <button class="active" aria-label="Slide 1"></button>
+<?php endif; ?>
+      </div>
+      <button class="nav-arrow prev" aria-label="Sebelumnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+      <button class="nav-arrow next" aria-label="Berikutnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+      <div class="badge"><strong><?= h($aboutBadgeYears) ?></strong><span style="color:var(--muted);font-size:14px;">Pengalaman menghadirkan relaksasi</span></div>
+    </div>
+    <div>
+      <div class="eyebrow">Tentang Kami</div>
+      <h2>Rasakan Kenyamanan di Mana Pun Anda Berada</h2>
+      <p>Aryana Massage adalah layanan pijat panggilan di Jogja yang profesional dan terjangkau. Kami memahami betapa pentingnya relaksasi dan kesehatan dalam kehidupan sehari-hari, dan kami berkomitmen memberikan pengalaman pijat yang luar biasa langsung di kenyamanan rumah Anda.</p>
+      <p>Dengan terapis berpengalaman dan bersertifikat, kami menawarkan berbagai jenis pijat yang dapat disesuaikan dengan kebutuhan Anda &mdash; mulai dari pijat tradisional hingga perawatan spesial untuk ibu hamil.</p>
+      <ul>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Teknik pijat efektif &amp; aman untuk meredakan stres</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Mengurangi ketegangan otot &amp; pegal kronis</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Meningkatkan kesejahteraan tubuh secara keseluruhan</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Pilihan Terbaik untuk Anda</div>
+      <h2>Dipercaya Ribuan Pelanggan</h2>
+    </div>
+    <div class="stats-grid reveal-fade">
+      <div class="stat"><div class="num" data-target="12" data-suffix="+">0</div><div class="lbl">Menu Treatment</div></div>
+      <div class="stat"><div class="num" data-target="1500" data-suffix="+" data-format="dot">0</div><div class="lbl">Happy Clients</div></div>
+      <div class="stat"><div class="num" data-target="96" data-suffix="%">0</div><div class="lbl">Repeat Customers</div></div>
+      <div class="stat"><div class="num" data-target="5" data-decimals="1">0.0</div><div class="lbl">Google Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Layanan Kami</div>
+      <h2>Layanan Terbaik Kami</h2>
+      <p>Kombinasi terapis berpengalaman dan produk alami pilihan untuk mengusir penat, meredakan otot kaku, dan mengembalikan energi segar Anda.</p>
+    </div>
+    <div class="svc-grid">
+<?php foreach ($services as $i => $svc): $icon = $svcIcons[$i % count($svcIcons)]; ?>
+      <div class="svc"><div class="svc-img" style="background-image:url('<?= h($svc['image'] ?? '') ?>');"></div><div class="svc-body"><div class="ic"><?= $icon ?></div><h4><?= h($svc['title'] ?? '') ?></h4><p><?= h($svc['description'] ?? '') ?></p><a href="#book" class="svc-book" data-service="<?= h($svc['title'] ?? '') ?>">Booking</a></div></div>
+<?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<section class="testi" id="testi">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Kata Mereka</div>
+      <h2>Cerita dari Pelanggan Kami</h2>
+    </div>
+    <div class="testi-grid reveal-fade">
+<?php foreach ($testimonials as $t): ?>
+      <div class="quote"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.02 4.1a.56.56 0 0 0 .42.3l4.52.66c.5.07.7.68.34 1.03l-3.27 3.19a.56.56 0 0 0-.16.5l.77 4.5c.09.5-.44.88-.88.64l-4.04-2.13a.56.56 0 0 0-.52 0l-4.04 2.13c-.44.24-.97-.14-.88-.64l.77-4.5a.56.56 0 0 0-.16-.5L3.42 9.59c-.36-.35-.16-.96.34-1.03l4.52-.66a.56.56 0 0 0 .42-.3z"/></svg></div><p>"<?= h($t['quote'] ?? '') ?>"</p><div class="who"><div class="av"><?= h(mb_substr((string)($t['name'] ?? ''), 0, 1)) ?></div><div><strong><?= h($t['name'] ?? '') ?></strong><small><?= h($t['location'] ?? '') ?></small></div></div></div>
+<?php endforeach; ?>
+    </div>
+    <div class="testi-hint">&larr; Geser untuk melihat lebih banyak &rarr;</div>
+  </div>
+</section>
+
+<section class="guide" id="guide">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Kenyamanan Bersama</div>
+      <h2>Ketentuan Layanan</h2>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-item"><div class="n">1</div><p>Pelanggan tidak diperbolehkan meminta layanan di luar prosedur treatment. Terapis berhak menghentikan sesi bila merasa tidak aman.</p></div>
+      <div class="guide-item"><div class="n">2</div><p>Pijat tidak diberikan kepada pelanggan dengan demam tinggi atau kondisi menular.</p></div>
+      <div class="guide-item"><div class="n">3</div><p>Pelanggan bertanggung jawab atas barang pribadi selama sesi berlangsung.</p></div>
+      <div class="guide-item"><div class="n">4</div><p>Pembatalan kurang dari 30 menit sebelum jadwal akan dikenakan biaya.</p></div>
+      <div class="guide-item"><div class="n">5</div><p>Jika terapis sudah tiba di lokasi dan pelanggan membatalkan, ada biaya tambahan.</p></div>
+      <div class="guide-item"><div class="n">6</div><p>Untuk hotel atau vila, pastikan akomodasi mengizinkan terapis dari luar sebelum booking.</p></div>
+      <div class="guide-item"><div class="n">7</div><p>Mohon informasikan terlebih dahulu kondisi kesehatan seperti darah tinggi, luka, cidera, atau alergi kepada terapis sebelum sesi dimulai.</p></div>
+    </div>
+    <p class="guide-note">Gratis biaya transportasi untuk jarak di bawah 5 km dari lokasi kami.</p>
+  </div>
+</section>
+
+<section class="cta-band" id="book">
+  <div class="wrap">
+    <h2>Siap Manjakan Diri Anda? Jadwalkan Sekarang Juga!</h2>
+    <p>Pesan terapis tersertifikasi kami sekarang dan nikmati relaksasi bintang lima tanpa keluar rumah.</p>
+    <a href="#" class="btn" data-wa-general>Booking via WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-center">
+    <div class="foot-logo" style="justify-content:center;"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/><path d="m8 8 1.88 1.88M14.12 9.88 16 8m-8 8 1.88-1.88M14.12 14.12 16 16"/></svg></span> Aryana Massage</div>
+    <p style="max-width:440px;margin:0 auto 36px;"><?= h($footerData['description'] ?? '') ?></p>
+
+    <h4 class="eyebrow">Alamat Kami</h4>
+    <p style="margin-bottom:32px;"><?= h($contact['address'] ?? '') ?></p>
+
+    <h4 class="eyebrow">Hubungi Kami</h4>
+    <div class="foot-contact-row" style="margin-bottom:32px;"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><a href="https://wa.me/<?= h($contact['whatsapp'] ?? '') ?>" target="_blank" rel="noopener"><?= h($contact['whatsappDisplay'] ?? '') ?></a></div>
+
+    <h4 class="eyebrow">Follow Us On</h4>
+    <div class="foot-social">
+      <a href="<?= h($social['facebook'] ?? '#') ?>" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.505 17.523 2 12 2S2 6.505 2 12.06c0 5.02 3.657 9.184 8.438 9.94v-7.03H7.898v-2.91h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.24 0-1.628.771-1.628 1.562v1.878h2.773l-.443 2.91h-2.33V22c4.78-.756 8.435-4.92 8.435-9.94Z"/></svg></a>
+      <a href="<?= h($social['tiktok'] ?? '#') ?>" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82a4.28 4.28 0 0 1-2.63-2.61 4.34 4.34 0 0 1-.15-1.12h-3.07v13.9a2.59 2.59 0 0 1-4.61 1.6 2.59 2.59 0 0 1 1.83-4.4c.27 0 .53.04.78.12V9.99a5.6 5.6 0 0 0-.78-.06 5.62 5.62 0 0 0-3.9 9.63 5.62 5.62 0 0 0 9.6-3.96V9.05a7.34 7.34 0 0 0 4.28 1.36V7.34a4.29 4.29 0 0 1-1.35-1.52Z"/></svg></a>
+      <a href="<?= h($social['instagram'] ?? '#') ?>" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    </div>
+
+    <nav class="foot-nav">
+      <a href="#">Home</a>
+      <a href="#about">Tentang Kami</a>
+      <a href="#services">Layanan</a>
+      <a href="#book">Kontak Kami</a>
+    </nav>
+
+    <div class="foot-bottom"><?= h($footerData['copyright'] ?? '') ?></div>
+  </div>
+</footer>
+
+<div class="wa-float" id="waFloat">
+  <div class="wa-bubble" id="waBubble">Konsultasikan sekarang</div>
+  <a href="#" class="wa-btn" data-wa-general aria-label="Chat via WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+</div>
+
+<script>
+(function(){
+  var burger=document.querySelector('.burger');
+  var navLinks=document.querySelector('.nav-links');
+  if(burger&&navLinks){
+    burger.addEventListener('click',function(){
+      burger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        burger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+  }
+
+  var slider=document.getElementById('aboutSlider');
+  if(slider){
+    var slides=slider.querySelectorAll('.slide');
+    var dots=slider.querySelectorAll('.dots button');
+    var idx=0,timer;
+    function show(i){
+      idx=(i+slides.length)%slides.length;
+      slides.forEach(function(s,n){s.classList.toggle('active',n===idx);});
+      dots.forEach(function(d,n){d.classList.toggle('active',n===idx);});
+    }
+    function restart(){clearInterval(timer);timer=setInterval(function(){show(idx+1);},5000);}
+    dots.forEach(function(d,n){d.addEventListener('click',function(){show(n);restart();});});
+    var nx=slider.querySelector('.nav-arrow.next');
+    var pv=slider.querySelector('.nav-arrow.prev');
+    if(nx)nx.addEventListener('click',function(){show(idx+1);restart();});
+    if(pv)pv.addEventListener('click',function(){show(idx-1);restart();});
+    restart();
+  }
+
+  var revealEls=document.querySelectorAll('.svc, .reveal-fade');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('reveal');io.unobserve(e.target);}
+      });
+    },{threshold:0.15});
+    revealEls.forEach(function(el){io.observe(el);});
+  }else{
+    revealEls.forEach(function(el){el.classList.add('reveal');});
+  }
+
+  function animateCount(el){
+    var target=parseFloat(el.getAttribute('data-target'))||0;
+    var suffix=el.getAttribute('data-suffix')||'';
+    var decimals=parseInt(el.getAttribute('data-decimals')||'0',10);
+    var useDot=el.getAttribute('data-format')==='dot';
+    var duration=1400;
+    var startTime=null;
+    function format(val){
+      if(decimals>0)return val.toFixed(decimals);
+      var intVal=Math.floor(val).toString();
+      if(useDot)intVal=intVal.replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+      return intVal;
+    }
+    function step(ts){
+      if(!startTime)startTime=ts;
+      var progress=Math.min((ts-startTime)/duration,1);
+      var eased=1-Math.pow(1-progress,3);
+      el.textContent=format(target*eased)+suffix;
+      if(progress<1){requestAnimationFrame(step);}else{el.textContent=format(target)+suffix;}
+    }
+    requestAnimationFrame(step);
+  }
+  var counters=document.querySelectorAll('.num[data-target]');
+  if(counters.length){
+    if('IntersectionObserver' in window){
+      var counterIO=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){animateCount(e.target);counterIO.unobserve(e.target);}
+        });
+      },{threshold:0.4});
+      counters.forEach(function(el){counterIO.observe(el);});
+    }else{
+      counters.forEach(function(el){animateCount(el);});
+    }
+  }
+
+  var WA='<?= h($contact['whatsapp'] ?? '6283165262513') ?>';
+  var waIcon='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>';
+  function waLink(msg){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(msg);}
+  var generalMsg='Halo Aryana Massage! \uD83D\uDC4B Saya ingin memesan layanan pijat panggilan ke lokasi saya. Boleh dibantu info layanan yang tersedia, jadwal, dan biayanya ya? Terima kasih \uD83D\uDE4F';
+  document.querySelectorAll('.svc-book[data-service]').forEach(function(a){
+    var svc=a.getAttribute('data-service');
+    var msg='Halo Aryana Massage! \uD83D\uDC4B Saya tertarik untuk memesan layanan *'+svc+'*. Boleh dibantu info ketersediaan jadwal, area layanan, dan biayanya ya? Terima kasih \uD83D\uDE4F';
+    a.setAttribute('href',waLink(msg));
+    a.setAttribute('target','_blank');
+    a.setAttribute('rel','noopener');
+    a.innerHTML=waIcon+' Booking';
+  });
+  document.querySelectorAll('[data-wa-general]').forEach(function(a){
+    a.setAttribute('href',waLink(generalMsg));
+    a.setAttribute('target','_blank');
+    a.setAttribute('rel','noopener');
+  });
+
+  var waBubble=document.getElementById('waBubble');
+  if(waBubble){
+    function waBubbleLoop(){
+      waBubble.classList.add('show');
+      setTimeout(function(){waBubble.classList.remove('show');},5000);
+    }
+    waBubbleLoop();
+    setInterval(waBubbleLoop,10000);
+  }
+})();
+</script>
+</body>
+</html>
